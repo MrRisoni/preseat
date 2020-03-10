@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import PreSeat from './PreSeat';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <PreSeat />,
   document.getElementById('root')
 );
