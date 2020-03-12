@@ -6,8 +6,8 @@ class PreSeat extends Component {
     super(props);
 
     this.state = {
-      segments: [{from:'ath',to:'fra', key:'ath-fra',href:'#ath-fra', leg:0},
-    {from:'fra',to:'lax', leg:0}]
+      segments: [{from:'ath',to:'fra', key:'ath-fra',href:'#ath-fra',tab: 'tbath_fra',leg:0,sel:true,id:0},
+    {from:'fra',to:'lax', key:'fra-lax', href:'#fra-lax',leg:0,tab: 'tbfra_lax',sel:false,id:1}]
   };
   }
 
@@ -16,10 +16,13 @@ class PreSeat extends Component {
 
 
 
-   <ul class="nav nav-tabs" id="myTab" role="tablist">
+   <ul className="nav nav-tabs" id="myTab" role="tablist">
    {this.state.segments.map((sgx) => {
-     return (   <li class="nav-item">
-          <a class="nav-link active" id={sgx.key} data-toggle="tab" href={sgx.href} role="tab" aria-controls={sgx.key} aria-selected="true">{sgx.from}-{sgx.to}</a>
+     let clsName  = (sgx.id ==1) ? " nav-link " : "nav-link active";
+    
+
+     return (   <li className="nav-item">
+          <a className={clsName} id={ `string${sgx.key}` } data-toggle="tab" href={sgx.href} role="tab" aria-controls={sgx.key} aria-selected={sgx.sel}>{sgx.from}-{sgx.to}</a>
         </li>)
    })}
 
@@ -29,7 +32,8 @@ class PreSeat extends Component {
 
      <div className="tab-content" id="myTabContent">
      {this.state.segments.map((sgx) => {
-        return (<div className="tab-pane fade" id={sgx.key} role="tabpanel" aria-labelledby="profile-tab">.test..</div>);
+          let clsName  = (sgx.id ==1) ? " tab-pane fade " : "tab-pane fade show active";
+        return (<div className={clsName} id={sgx.key} role="tabpanel" aria-labelledby={sgx.tab}>{sgx.key}</div>);
    })}
      </div>
 
