@@ -1,0 +1,26 @@
+{
+	"segments": [{
+			"id": 0,
+			"from": "ATH",
+			"to": "FRA",
+			"leg": 0
+		},
+		{
+			"id": 1,
+			"from": "FRA",
+			"to": "LHR",
+			"leg": 0
+		},
+		{
+			"id": 1,
+			"from": "LHR",
+			"to": "LAX",
+			"leg": 0
+		}
+	],
+	"paxes": [{
+		"id": 0,
+		"ptc": "ADT",
+		"name": "Strindberg"
+	}]
+}

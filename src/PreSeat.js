@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+const  rawTripJson = require('./tripData');
 
 
 class PreSeat extends Component {
   constructor(props) {
     super(props);
+
+
+    console.log(rawTripJson);
 
     this.state = {
       segments: [{from:'ath',to:'fra', key:'ath-fra',href:'#ath-fra',tab: 'tbath_fra',leg:0,sel:true,id:0},
@@ -18,8 +22,8 @@ class PreSeat extends Component {
 
    <ul className="nav nav-tabs" id="myTab" role="tablist">
    {this.state.segments.map((sgx) => {
-     let clsName  = (sgx.id ==1) ? " nav-link " : "nav-link active";
-    
+     let clsName  = (sgx.id >0) ? " nav-link " : "nav-link active";
+
 
      return (   <li className="nav-item">
           <a className={clsName} id={ `string${sgx.key}` } data-toggle="tab" href={sgx.href} role="tab" aria-controls={sgx.key} aria-selected={sgx.sel}>{sgx.from}-{sgx.to}</a>
@@ -32,7 +36,7 @@ class PreSeat extends Component {
 
      <div className="tab-content" id="myTabContent">
      {this.state.segments.map((sgx) => {
-          let clsName  = (sgx.id ==1) ? " tab-pane fade " : "tab-pane fade show active";
+          let clsName  = (sgx.id >0) ? " tab-pane fade " : "tab-pane fade show active";
         return (<div className={clsName} id={sgx.key} role="tabpanel" aria-labelledby={sgx.tab}>{sgx.key}</div>);
    })}
      </div>
