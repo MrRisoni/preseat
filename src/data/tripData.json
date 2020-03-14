@@ -12,15 +12,34 @@
 			"leg": 0
 		},
 		{
-			"id": 1,
+			"id": 2,
 			"from": "LHR",
 			"to": "LAX",
 			"leg": 0
 		}
 	],
-	"paxes": [{
+	"passengers": [{
 		"id": 0,
+		"key" :"T1",
 		"ptc": "ADT",
-		"name": "Strindberg"
+		"name": "August Strindberg",
+		"totalCost" : 0,
+		"selection":[
+			{
+				"segId":0,
+				"chosen":"",
+				"cost" : 0
+			},
+			{
+				"segId":1,
+				"chosen":"",
+				"cost" : 0
+			},
+			{
+				"segId":2,
+				"chosen":"",
+				"cost" : 0
+			}
+		]
 	}]
 }

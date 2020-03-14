@@ -17,12 +17,21 @@ class PriceBox extends Component {
           <table className="table table-striped table-bordered">
             <thead>
                 <tr>
+                  <td></td>
                   {this.props.segments.map((sg) => {
                      return (<th>{sg.key}</th>)
                   })}
                 </tr>
             </thead>
             <tbody>
+            {this.props.passengers.map((psg) => {
+               return (<tr key={psg.key}><td>{psg.name}</td>
+                 {psg.selection.map((choice) => {
+                    return (<td>{choice.chosen}</td>)
+                 })}
+
+                 </tr>)
+            })}
             </tbody>
           </table>
 
