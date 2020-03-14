@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const  rawTripJson = require('./tripData');
+const  rawTripJson = require('./data/tripData');
 
 
 class PreSeat extends Component {
@@ -7,12 +7,25 @@ class PreSeat extends Component {
     super(props);
 
 
-    console.log(rawTripJson);
+  //  console.log(rawTripJson);
+    let segments  = [];
+    for (var i =0; i < rawTripJson.segments.length ; i++) {
+
+      let sig = rawTripJson.segments[i];
+      let key = sig.from.toLowerCase() + '-' + sig.to.toLowerCase();
+      let href = '#' + key;
+      let tab = 'tb' +key;
+      let selected = (i==0);
+      sig =   Object.assign(sig, {key,href,tab, selected});
+
+      segments.push(sig);
+    }
+
+  console.log(segments);
 
     this.state = {
-      segments: [{from:'ath',to:'fra', key:'ath-fra',href:'#ath-fra',tab: 'tbath_fra',leg:0,sel:true,id:0},
-    {from:'fra',to:'lax', key:'fra-lax', href:'#fra-lax',leg:0,tab: 'tbfra_lax',sel:false,id:1}]
-  };
+      segments: segments
+    };
   }
 
   render() {
