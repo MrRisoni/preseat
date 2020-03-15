@@ -18,6 +18,11 @@
 			"leg": 0
 		}
 	],
+	"segmentsCost": [
+		{ "id":0, "total":40},
+		{ "id":1, "total":30},
+		{ "id":2, "total":20}
+	],
 	"passengers": [{
 		"id": 0,
 		"key" :"T1",

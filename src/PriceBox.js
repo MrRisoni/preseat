@@ -21,6 +21,7 @@ class PriceBox extends Component {
                   {this.props.segments.map((sg) => {
                      return (<th>{sg.key}</th>)
                   })}
+	   	<td>Total</td>
                 </tr>
             </thead>
             <tbody>
@@ -29,9 +30,17 @@ class PriceBox extends Component {
                  {psg.selection.map((choice) => {
                     return (<td>{choice.chosen}</td>)
                  })}
-
+			<td>0</td>
                  </tr>)
             })}
+                <tr>
+                  <td>Total</td>
+                  {this.props.segmentsCost.map((sgc) => {
+                        return (<td>{sgc.total}</td>)
+		  })}
+	   	<td>Total</td>
+                </tr>
+
             </tbody>
           </table>
 

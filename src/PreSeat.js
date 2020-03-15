@@ -23,18 +23,21 @@ class PreSeat extends Component {
       segments.push(sig);
     }
 
-  console.log(segments);
+	  //  console.log(segments);
+
 
     this.state = {
       segments: segments,
-      passengers: rawTripJson.passengers
+      passengers: rawTripJson.passengers,
+  	segmentsCost: rawTripJson.segmentsCost
     };
   }
 
   render() {
    return (<main>
 
-          <PriceBox segments={this.state.segments} passengers={this.state.passengers}/>
+          <PriceBox segments={this.state.segments} passengers={this.state.passengers}
+	   segmentsCost={this.state.segmentsCost}/>
         <SegmentTabs segments={this.state.segments}/>
 
      </main>)
