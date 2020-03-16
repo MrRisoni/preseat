@@ -9,4 +9,13 @@ class SeatButton extends Component {
 
     };
   }
-}
+
+  render()
+  {
+    return(<button type="button" className="btn btn-primary setBtn">C</button>
+  )
+    }
+  }
+
+
+  export default SeatButton;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SeatsSection from './SeatsSection';
 
 
 class SegmentTabs extends Component {
@@ -33,7 +34,10 @@ class SegmentTabs extends Component {
      <div className="tab-content" id="myTabContent">
      {this.props.segments.map((sgx) => {
           let clsName  = (sgx.id >0) ? " tab-pane fade " : "tab-pane fade show active";
-        return (<div className={clsName} id={sgx.key} role="tabpanel" aria-labelledby={sgx.tab}>{sgx.key}</div>);
+        return (<div className={clsName} id={sgx.key} role="tabpanel" aria-labelledby={sgx.tab}>
+		
+		<SeatsSection key={sgx.key} stmp={this.props.stmp}/>
+		</div>);
    })}
      </div>
 

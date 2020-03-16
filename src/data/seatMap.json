@@ -5,7 +5,23 @@
          {
             "start":13,
             "end":20,
-            "layout":[],
+            "layout":[ {
+                "name":"A",
+                "pos":"W"
+             },
+             {
+                "name":"B",
+                "pos":"A"
+             },
+             {
+                "name":"C",
+                "pos":"A"
+             },
+             {
+                "name":"D",
+                "pos":"W"
+             }
+             ],
             "rows":[
                {
                   "rowId":13,

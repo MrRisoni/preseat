@@ -2,4 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+}
+
+.setBtn {
+  height: 35px;
+  margin:5px
+}
+
+.ailse-left {
+ margin-left:45px
+}
+
+
+
+.ailse-right {
+ margin-right:45px
 }

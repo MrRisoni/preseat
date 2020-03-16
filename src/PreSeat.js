@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 const  rawTripJson = require('./data/tripData');
+const seatMaps = require('./data/seatMap');
 import SegmentTabs from './SegmentTabs';
 import PriceBox from './PriceBox';
 
@@ -29,7 +30,8 @@ class PreSeat extends Component {
     this.state = {
       segments: segments,
       passengers: rawTripJson.passengers,
-  	segmentsCost: rawTripJson.segmentsCost
+  	segmentsCost: rawTripJson.segmentsCost,
+	firstSeg : seatMaps[0]
     };
   }
 
@@ -38,7 +40,7 @@ class PreSeat extends Component {
 
           <PriceBox segments={this.state.segments} passengers={this.state.passengers}
 	   segmentsCost={this.state.segmentsCost}/>
-        <SegmentTabs segments={this.state.segments}/>
+        <SegmentTabs stmp={this.state.firstSeg}  segments={this.state.segments}/>
 
      </main>)
  }
