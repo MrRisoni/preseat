@@ -1,281 +1,359 @@
 [
    {
       "segId":0,
-      "sections":{
-         "start":13,
-         "end":20,
-         "layout":[
-            {
-               "name":"A",
-               "pos":"W"
-            },
-            {
-               "name":"B",
-               "pos":"A"
-            },
-            {
-               "name":"C",
-               "pos":"A"
-            },
-            {
-               "name":"D",
-               "pos":"W"
-            }
-         ],
-         "rows":[
-            {
-               "rowId":13,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":14,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":15,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":16,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":17,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":18,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":19,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":20,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":21,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":22,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":23,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            },
-            {
-               "rowId":24,
-               "seats":[
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  },
-                  {
-                     "props":"LG EX",
-                     "avaiable":1
-                  }
-               ]
-            }
-         ]
-      }
+      "sections":[
+         {
+            "start":13,
+            "end":20,
+            "layout":[],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":14,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":15,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":16,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":17,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":18,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":19,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":20,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":21,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":22,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":23,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               },
+               {
+                  "rowId":24,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "start":21,
+            "end":22,
+            "layout":[
+               {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"C"
+               },
+               {
+                  "name":"G",
+                  "pos":"A"
+               },
+               {
+                  "name":"H",
+                  "pos":"A"
+               },
+               {
+                  "name":"I",
+                  "pos":"C"
+               },
+               {
+                  "name":"J",
+                  "pos":"W"
+               }
+            ],
+            "rows":[
+               {
+                  "rowId":21,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
    }
 ]
