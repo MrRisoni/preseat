@@ -11,11 +11,11 @@ body {
 }
 
 .ailse-left {
- margin-left:45px
+ margin-right:45px;
 }
 
 
 
 .ailse-right {
- margin-right:45px
+  margin-left:45px;
 }

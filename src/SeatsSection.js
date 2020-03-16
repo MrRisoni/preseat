@@ -22,8 +22,16 @@ class SeatsSection extends Component {
     	for (let i =0 ; i < 12; i++) {
     		   let colsHtml = [];
             for (let x=0;x <4 ; x++) {
-      		        let el='s';
-      		          colsHtml.push(<SeatButton/>);
+      		        let el='';
+                  if (x>0) {
+                    if (layout[x].pos == 'A' && layout[x+1].pos == 'A') {
+                      el = 'ailse-left';
+                    }
+                    if (layout[x-1].pos == 'A' && layout[x].pos == 'A') {
+                      el = 'ailse-right';
+                    }
+                  }
+    		          colsHtml.push(<SeatButton ailseClass={el}/>);
           }
     		           seatHtml.push(<div className="row">{colsHtml}</div>);
 
