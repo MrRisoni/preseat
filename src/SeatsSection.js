@@ -62,7 +62,7 @@ class SeatsSection extends Component {
                             }
                           }
 
-    		                    colsHtml.push(<SeatButton ailseClass={el}/>);
+    		                    colsHtml.push(<SeatButton ailseClass={el} rowId={i}/>);
                   }
     		           seatsHtml.push(<div className="row">{colsHtml}</div>);
 
