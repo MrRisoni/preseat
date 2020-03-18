@@ -1,50 +1,56 @@
-import React, { Component } from 'react';
+import React, {
+    Component
+} from 'react';
 import SeatsSection from './SeatsSection';
 
 
 class SegmentTabs extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-
-    };
-  }
-
-
-  render() {
-   return (<section>
+        this.state = {
+        };
+    }
 
 
-
-   <ul className="nav nav-tabs" id="myTab" role="tablist">
-   {this.props.segments.map((sgx) => {
-     let clsName  = (sgx.id >0) ? " nav-link " : "nav-link active";
+    render() {
+        return ( < section >
 
 
-     return (   <li className="nav-item">
-          <a className={clsName} id={ `string${sgx.key}` } data-toggle="tab" href={sgx.href} role="tab" aria-controls={sgx.key} aria-selected={sgx.sel}>{sgx.from}-{sgx.to}</a>
-        </li>)
-   })}
+
+            <ul className = "nav nav-tabs" id = "myTab"  role = "tablist" > {
+                this.props.segments.map((sgx) => {
+                    let clsName = (sgx.id > 0) ? " nav-link " : "nav-link active";
 
 
-   </ul>
+                    return ( <li className = "nav-item" >
+                        <a className = {clsName}  id = {`string${sgx.key}` }
+                        data-toggle = "tab"  href = { sgx.href}
+                        role = "tab"  aria-controls = {sgx.key} aria-selected = {sgx.sel} >
+                            {sgx.from}-{sgx.to} < /a> < /li > )
+                })
+            }
 
 
-     <div className="tab-content" id="myTabContent">
-     {this.props.segments.map((sgx) => {
-          let clsName  = (sgx.id >0) ? " tab-pane fade " : "tab-pane fade show active";
-        return (<div className={clsName} id={sgx.key} role="tabpanel" aria-labelledby={sgx.tab}>
-		
-		<SeatsSection key={sgx.key} stmp={this.props.stmp}/>
-		</div>);
-   })}
-     </div>
+            </ul>
 
 
-     </section>)
- }
+            <div className = "tab-content"  id = "myTabContent" > {
+                this.props.segments.map((sgx) => {
+                    let clsName = (sgx.id > 0) ? " tab-pane fade " : "tab-pane fade show active";
+                    return ( < div className = {clsName}   id = {sgx.key}
+                        role = "tabpanel"
+                        aria-labelledby = {sgx.tab} >
 
-}
+                        <SeatsSection key = {sgx.key} stmp = {this.props.stmp}/>
 
-export default SegmentTabs;
+                        </div> );
+                })
+            } </div>
+
+            </section>)
+        }
+
+    }
+
+    export default SegmentTabs;
