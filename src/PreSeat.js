@@ -39,28 +39,13 @@ class PreSeat extends Component {
 
     render() {
         return ( < main >
+            <PriceBox segments={this.state.segments}
+                      passengers={this.state.passengers}
+                      segmentsCost={this.state.segmentsCost}/>
 
-            <
-            PriceBox segments = {
-                this.state.segments
-            }
-            passengers = {
-                this.state.passengers
-            }
-            segmentsCost = {
-                this.state.segmentsCost
-            }
-            /> <
-            SegmentTabs stmp = {
-                this.state.firstSeg
-            }
-            segments = {
-                this.state.segments
-            }
-            />
-
-            <
-            /main>)
+            <SegmentTabs stmp={this.state.firstSeg}
+                          segments={this.state.segments}/>
+            </main>)
         }
     }
 
