@@ -1,28 +1,26 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .setBtn {
-    /*  height: 5%; */
-    margin: 5 px
+  /*  height: 5%; */
+  margin: 5 px;
 }
 
 .ailse-left {
-    margin-right: 3 % ;
+  margin-right: 3 %;
 }
 
 .ailse-left-big {
-  margin-right: 7 % ;
+  margin-right: 7 %;
 }
 
-
 .ailse-right {
-  margin-left: 3 % ;
+  margin-left: 3 %;
 }
 
 .ailse-right-big {
-    margin-left: 7 % ;
+  margin-left: 7 %;
 }
