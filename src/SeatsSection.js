@@ -13,19 +13,6 @@ class SeatsSection extends Component {
   render() {
     let seatsHtml = [];
 
-    //	console.log(this.props.stmp.sections[s]);
-    //	const layout = [ {pos:'W',name:'A'},{pos:'A',name:'B'},{pos:'A',name:'C'},{pos:'W',name:'D'}];
-    /*	const layout = [ {pos:'W',name:'A'},
-                  {pos:'C',name:'B'},
-                  {pos:'A',name:'C'},
-                  {pos:'A',name:'D'},
-                  {pos:'C',name:'E'},
-                  {pos:'C',name:'F'},
-                  {pos:'A',name:'G'},
-                  {pos:'A',name:'H'},
-                  {pos:'C',name:'I'},
-                  {pos:'W',name:'J'}]
-                  */
     let layout = this.props.data.layout;
     let start = this.props.data.start;
     let finish = this.props.data.end;
@@ -48,17 +35,17 @@ class SeatsSection extends Component {
         }
 
         if (x < layout.length - 1) {
-          if (layout[x].pos == "W" && layout[x + 1].pos == "C") {
-            el = "ailse-left-big";
+          if (layout[x].pos == "w" && layout[x + 1].pos == "c") {
+            //  el = "ailse-left-big";
           }
         }
+        colsHtml.push(
+          <SeatButton colName={layout[x].name} ailseClass={el} rowId={i} />
+        );
 
-        colsHtml.push(<SeatButton ailseClass={el} rowId={i} />);
+        seatsHtml.push(<div className="row seatsHorRow">{colsHtml}</div>);
       }
-
-      seatsHtml.push(<div className="row">{colsHtml}</div>);
     }
-
     return <p>{seatsHtml}</p>;
   }
 }

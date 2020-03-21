@@ -8,15 +8,15 @@ class SeatButton extends Component {
   }
 
   render() {
-    let clsName = "btn btn-primary setBtn " + this.props.ailseClass;
+    let clsName = "btn seatBtn btn-sm btn-primary " + this.props.ailseClass;
 
-    //  return(<button type="button" className={clsName}></button>
+    //
     return (
       <section>
         <button type="button" className={clsName}>
-          C
+          {this.props.colName}
         </button>{" "}
-        <span>{this.props.rowId}</span>{" "}
+        {/*        <span className="row-number">{this.props.rowId}</span>{" "} */}
       </section>
     );
   }

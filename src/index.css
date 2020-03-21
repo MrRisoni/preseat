@@ -4,23 +4,57 @@ body {
   font-family: sans-serif;
 }
 
-.setBtn {
-  /*  height: 5%; */
-  margin: 5 px;
+.seatBtn {
+  padding: 4px;
+  font-size: 12px;
+  margin: 5px;
+  height: 32px;
+  width: 35px;
+}
+
+.seatNotAllowed {
+  background-color: red;
+  color: white;
+  pointer-events: none;
+}
+
+.seatChosen {
+  background-color: yellow;
+  color: black;
+  pointer-events: none;
+}
+
+.seatNotAvailable {
+  background-color: #efefef;
+  color: white;
+  pointer-events: none;
+}
+
+.seatBtnt:hover {
+  background-color: blue;
+  color: white;
+}
+
+.seatsHorRow {
+  width: 90%;
 }
 
 .ailse-left {
-  margin-right: 3 %;
+  margin-right: 13px;
 }
 
 .ailse-left-big {
-  margin-right: 7 %;
+  margin-right: 17%;
 }
 
 .ailse-right {
-  margin-left: 3 %;
+  margin-left: 13%;
 }
 
 .ailse-right-big {
-  margin-left: 7 %;
+  margin-left: 17%;
+}
+
+.row-number {
+  font-size: 122x;
 }
