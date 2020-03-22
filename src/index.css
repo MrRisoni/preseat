@@ -12,12 +12,6 @@ body {
   width: 35px;
 }
 
-.seatNotAllowed {
-  background-color: red;
-  color: white;
-  pointer-events: none;
-}
-
 .seatChosen {
   background-color: yellow;
   color: black;

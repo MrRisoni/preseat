@@ -17,7 +17,13 @@ class SeatButton extends Component {
     }
     return (
       <span>
-        <button type="button" className={clsName}>
+        <button
+          type="button"
+          className={clsName}
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Tooltip on top"
+        >
           {this.props.colName}
         </button>
       </span>
