@@ -39,22 +39,9 @@ body {
   width: 90%;
 }
 
-.ailse-left {
-  margin-right: 13px;
-}
-
-.ailse-left-big {
-  margin-right: 17%;
-}
-
-.ailse-right {
-  margin-left: 13%;
-}
-
-.ailse-right-big {
-  margin-left: 17%;
-}
-
 .row-number {
-  font-size: 122x;
+  font-size: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 9px;
 }

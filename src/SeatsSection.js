@@ -16,21 +16,23 @@ class SeatsSection extends Component {
     let layout = this.props.data.layout;
     let start = this.props.data.start;
     let finish = this.props.data.end;
-
+    console.log("layut len " + layout.length);
     for (let i = start; i < finish; i++) {
       let colsHtml = [];
       for (let x = 0; x < layout.length; x++) {
         let el = "";
+        let rowId = 0;
         if (x > 0) {
           if (layout[x].pos == "A" && layout[x + 1].pos == "A") {
             el = "ailse-left";
+            rowId = i;
           }
           if (layout[x - 1].pos == "A" && layout[x].pos == "A") {
             el = "ailse-right";
           }
 
           if (layout[x - 1].pos == "C" && layout[x].pos == "W") {
-            el = "ailse-right-big";
+            // el = "ailse-right-big";
           }
         }
 
@@ -39,9 +41,18 @@ class SeatsSection extends Component {
             //  el = "ailse-left-big";
           }
         }
+
         colsHtml.push(
-          <SeatButton colName={layout[x].name} ailseClass={el} rowId={i} />
+          <SeatButton colName={layout[x].name} ailseClass={el} rowId={rowId} />
         );
+
+        if (rowId > 0) {
+          colsHtml.push(
+            <span className="row-number">
+              <p>{rowId}</p>
+            </span>
+          );
+        }
 
         seatsHtml.push(<div className="row seatsHorRow">{colsHtml}</div>);
       }
