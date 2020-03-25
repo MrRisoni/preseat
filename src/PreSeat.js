@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-const rawTripJson = require("./data/tripData");
-const seatMaps = require("./data/seatMap");
+const seatMaps = require("./seatMap");
 import SegmentTabs from "./SegmentTabs";
 import PriceBox from "./PriceBox";
 
@@ -8,6 +7,10 @@ class PreSeat extends Component {
   constructor(props) {
     super(props);
 
+    console.log('preseat compo');
+    console.log(this.props);
+
+let rawTripJson = {};
     //  console.log(rawTripJson);
     let segments = [];
     for (var i = 0; i < rawTripJson.segments.length; i++) {
