@@ -19,7 +19,7 @@ class SeatsSection extends Component {
     let finish = this.props.data.end;
     let seatsData = this.props.data.rows;
 
-    let r=-1;
+    let r = -1;
     for (let i = start; i < finish; i++) {
       let colsHtml = [];
       r++;
@@ -31,12 +31,20 @@ class SeatsSection extends Component {
         var el = [];
         if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
           console.log(seatsData[r].seats[x]);
-          if (seatsData[r].seats[x].available ==0){
+
+          if (seatsData[r].seats[x].available == 0) {
+            el = []; // top priority not available
             el.push("seatNotAvailable");
+          }
+
+          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") > 0) {
+            var exitClass = " emergencyExit emergencyLeft";
+
+            colsHtml.push(<div className={exitClass}></div>);
           }
         }
 
-        btnKey = "stBtn_" + i  +layout[x].name;
+        btnKey = "stBtn_" + i + layout[x].name;
         colsHtml.push(
           <SeatButton
             key={btnKey}
@@ -46,6 +54,16 @@ class SeatsSection extends Component {
           />
         );
 
+        if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
+          if (
+            x == layout.length - 1 &&
+            seatsData[r].seats[x].props.indexOf("EX") > 0
+          ) {
+            var exitClass = " emergencyExit emergencyRight";
+
+            colsHtml.push(<div className={exitClass}></div>);
+          }
+        }
         if (rowId > 0) {
           colsHtml.push(
             <span className="row-number">

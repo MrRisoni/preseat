@@ -9,7 +9,7 @@ import English from "./locales/en.json";
 
 export const DataContext = createContext();
 
-class DataContextProvider extends Component {
+class PreSeatContextProvider extends Component {
   state = {
     segments: [
       {
@@ -176,4 +176,4 @@ class DataContextProvider extends Component {
   }
 }
 
-export default DataContextProvider;
+export default PreSeatContextProvider;

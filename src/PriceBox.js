@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DataContext } from "./DataContext";
+import { DataContext } from "./PreSeatContext";
 
 class PriceBox extends Component {
   static contextType = DataContext;

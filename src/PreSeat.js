@@ -2,7 +2,7 @@ import React, { Component } from "react";
 const seatMaps = require("./seatMap");
 import SegmentTabs from "./SegmentTabs";
 import PriceBox from "./PriceBox";
-import { DataContext } from "./DataContext";
+import { DataContext } from "./PreSeatContext";
 
 class PreSeat extends Component {
   static contextType = DataContext;
@@ -11,7 +11,6 @@ class PreSeat extends Component {
     return (
       <main>
         <PriceBox />
-
         <SegmentTabs stmp={seatMaps} />
       </main>
     );

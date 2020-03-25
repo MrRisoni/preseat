@@ -24,6 +24,18 @@ body {
   pointer-events: none;
 }
 
+.emergegencyExit {
+  height: 45px;
+}
+
+.emergencyLeft {
+  border-left: 4px solid red;
+}
+
+.emergencyRight {
+  border-right: 4px solid red;
+}
+
 .seatBtnt:hover {
   background-color: blue;
   color: white;

@@ -1,13 +1,13 @@
 import React from "react";
 import PreSeat from "./PreSeat";
-import DataContextProvider from "./DataContext";
+import PreSeatContextProvider from "./PreSeatContext";
 
 function App() {
   return (
     <div className="App">
-      <DataContextProvider>
+      <PreSeatContextProvider>
         <PreSeat />
-      </DataContextProvider>
+      </PreSeatContextProvider>
     </div>
   );
 }
