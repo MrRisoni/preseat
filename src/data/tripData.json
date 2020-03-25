@@ -19,15 +19,38 @@
 		}
 	],
 	"segmentsCost": [
-		{ "id":0, "total":40},
-		{ "id":1, "total":30},
-		{ "id":2, "total":20}
+		{ "id":0, "total":15},
+		{ "id":1, "total":15},
+		{ "id":2, "total":15}
 	],
 	"passengers": [{
 		"id": 0,
 		"key" :"T1",
 		"ptc": "ADT",
 		"name": "August Strindberg",
+		"totalCost" : 0,
+		"selection":[
+			{
+				"segId":0,
+				"chosen":"",
+				"cost" : 0
+			},
+			{
+				"segId":1,
+				"chosen":"",
+				"cost" : 0
+			},
+			{
+				"segId":2,
+				"chosen":"",
+				"cost" : 0
+			}
+		]
+	},{
+		"id": 1,
+		"key" :"T2",
+		"ptc": "ADT",
+		"name": "Henrik Ibsen",
 		"totalCost" : 0,
 		"selection":[
 			{

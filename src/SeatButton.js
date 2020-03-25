@@ -8,9 +8,9 @@ class SeatButton extends Component {
   }
 
   render() {
-    let clsName = "btn seatBtn btn-sm btn-primary " + this.props.ailseClass;
+    let seatProperties =  this.props.seatContextClasses.join(' ');
+    let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
 
-    //
     let rowNumberDiv = <span />;
     if (this.props.rowId > 0) {
       rowNumberDiv = <span className="row-number">{this.props.rowId}</span>;

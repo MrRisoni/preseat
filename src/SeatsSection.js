@@ -12,18 +12,28 @@ class SeatsSection extends Component {
 
   render() {
     let seatsHtml = [];
-    let el = {};
+
     let btnKey = "";
     let layout = this.props.data.layout;
     let start = this.props.data.start;
     let finish = this.props.data.end;
+    let seatsData = this.props.data.rows;
 
+    let r=-1;
     for (let i = start; i < finish; i++) {
       let colsHtml = [];
+      r++;
       for (let x = 0; x < layout.length; x++) {
         let rowId = 0;
         if (x > 0 && layout[x].pos == "A" && layout[x + 1].pos == "A") {
           rowId = i;
+        }
+        var el = [];
+        if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
+          console.log(seatsData[r].seats[x]);
+          if (seatsData[r].seats[x].available ==0){
+            el.push("seatNotAvailable");
+          }
         }
 
         btnKey = "stBtn_" + i  +layout[x].name;
@@ -31,7 +41,7 @@ class SeatsSection extends Component {
           <SeatButton
             key={btnKey}
             colName={layout[x].name}
-            ailseClass={el}
+            seatContextClasses={el}
             rowId={rowId}
           />
         );
