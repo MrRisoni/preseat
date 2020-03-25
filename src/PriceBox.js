@@ -14,29 +14,27 @@ class PriceBox extends Component {
           <thead>
             <tr>
               <td></td>
-              {this.props.segments.map(sg => {
-                return <th>{sg.key}</th>;
-              })}
+              {this.props.segments.map(sg => (
+                 <th>{sg.key}</th>
+              ))}
               <td>Total</td>
             </tr>
           </thead>
           <tbody>
-            {this.props.passengers.map(psg => {
-              return (
+            {this.props.passengers.map(psg => (
                 <tr key={psg.key}>
                   <td>{psg.name}</td>
-                  {psg.selection.map(choice => {
-                    return <td>{choice.chosen}</td>;
-                  })}
+                  {psg.selection.map(choice => (
+                    <td>{choice.chosen}</td>
+                  ))}
                   <td>0</td>
                 </tr>
-              );
-            })}
+            ))}
             <tr>
               <td>Total</td>
-              {this.props.segmentsCost.map(sgc => {
-                return <td>{sgc.total}</td>;
-              })}
+              {this.props.segmentsCost.map(sgc => (
+                  <td>{sgc.total}</td>
+              ))}
               <td>Total</td>
             </tr>
           </tbody>
