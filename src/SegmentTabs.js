@@ -1,19 +1,30 @@
 import React, { Component } from "react";
 import SeatMap from "./SeatMap";
+import { DataContext } from "./DataContext";
 
 class SegmentTabs extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
+  static contextType = DataContext;
 
   render() {
+    let { segments } = this.context;
+
+    let segsArr = [];
+    for (var i = 0; i < segments.length; i++) {
+      let sig = segments[i];
+      let key = sig.from.toLowerCase() + "-" + sig.to.toLowerCase();
+      let href = "#" + key;
+      let tab = "tb" + key;
+      let selected = i == 0;
+      sig = Object.assign(sig, { key, href, tab, selected });
+
+      segsArr.push(sig);
+    }
+
     return (
       <section>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           {" "}
-          {this.props.segments.map(sgx => {
+          {segsArr.map(sgx => {
             let clsName = sgx.id > 0 ? " nav-link " : "nav-link active";
 
             return (
@@ -36,7 +47,7 @@ class SegmentTabs extends Component {
 
         <div className="tab-content" id="myTabContent">
           {" "}
-          {this.props.segments.map(sgx => {
+          {segsArr.map(sgx => {
             let clsName =
               sgx.id > 0 ? " tab-pane fade " : "tab-pane fade show active";
             return (
