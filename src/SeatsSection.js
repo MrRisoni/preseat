@@ -26,7 +26,7 @@ class SeatsSection extends Component {
           rowId = i;
         }
 
-        btnKey = "stBtn_" + i + +layout[x].name;
+        btnKey = "stBtn_" + i  +layout[x].name;
         colsHtml.push(
           <SeatButton
             key={btnKey}
@@ -46,7 +46,7 @@ class SeatsSection extends Component {
       }
       seatsHtml.push(<div className="row seatsHorRow">{colsHtml}</div>);
     }
-    return <p>{seatsHtml}</p>;
+    return <section className="segmentMap">{seatsHtml}</section>;
   }
 }
 export default SeatsSection;

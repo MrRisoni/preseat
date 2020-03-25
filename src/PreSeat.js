@@ -26,8 +26,7 @@ class PreSeat extends Component {
     this.state = {
       segments: segments,
       passengers: rawTripJson.passengers,
-      segmentsCost: rawTripJson.segmentsCost,
-      firstSeg: seatMaps[0]
+      segmentsCost: rawTripJson.segmentsCost
     };
   }
 
@@ -40,10 +39,7 @@ class PreSeat extends Component {
           segmentsCost={this.state.segmentsCost}
         />
 
-        <SegmentTabs
-          stmp={this.state.firstSeg}
-          segments={this.state.segments}
-        />
+        <SegmentTabs stmp={seatMaps} segments={this.state.segments} />
       </main>
     );
   }

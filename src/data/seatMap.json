@@ -58,5 +58,141 @@
          }
 
       ]
+   },
+   {
+      "segId":1,
+      "sections":[
+         {
+           "cabin" :"Υ",
+            "start":13,
+            "end":28,
+            "layout":[
+                {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"W"
+               }
+             ],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ]
+   },
+   {
+      "segId":2,
+      "sections":[
+         {
+           "cabin" :"Υ",
+            "start":13,
+            "end":28,
+            "layout":[
+                {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"C"
+               },
+               {
+                  "name":"G",
+                  "pos":"A"
+               },
+               {
+                  "name":"H",
+                  "pos":"A"
+               },
+               {
+                  "name":"I",
+                  "pos":"C"
+               },
+               {
+                  "name":"J",
+                  "pos":"W"
+               }
+             ],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "avaiable":1
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ]
    }
 ]
