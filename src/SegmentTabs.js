@@ -8,17 +8,15 @@ class SegmentTabs extends Component {
   render() {
     let { segments } = this.context;
 
-    let segsArr = [];
-    for (var i = 0; i < segments.length; i++) {
-      let sig = segments[i];
-      let key = sig.from.toLowerCase() + "-" + sig.to.toLowerCase();
-      let href = "#" + key;
-      let tab = "tb" + key;
-      let selected = i == 0;
-      sig = Object.assign(sig, { key, href, tab, selected });
+    let segsArr = segments.map((sg, idx) => {
+      let key = sg.from.toLowerCase() + "-" + sg.to.toLowerCase();
 
-      segsArr.push(sig);
-    }
+      return Object.assign(
+        {},
+        { key, href: "#" + key, tab: "tb" + key, selected: idx == 0 },
+        sg
+      );
+    });
 
     return (
       <section>
@@ -29,7 +27,7 @@ class SegmentTabs extends Component {
                 let clsName = sgx.id > 0 ? " nav-link " : "nav-link active";
 
                 return (
-                  <li className="nav-item">
+                  <li key={sgx.key} className="nav-item">
                     <a
                       className={clsName}
                       id={`string${sgx.key}`}
@@ -52,6 +50,7 @@ class SegmentTabs extends Component {
                   sgx.id > 0 ? " tab-pane fade " : "tab-pane fade show active";
                 return (
                   <div
+                    key={sgx.key}
                     className={clsName}
                     id={sgx.key}
                     role="tabpanel"

@@ -5,22 +5,19 @@ class PriceBox extends Component {
   static contextType = DataContext;
 
   render() {
-    console.log("pricebox compoe");
-    console.log(this.context);
     let { segments, passengers, segmentsCost } = this.context;
 
-    // oject assign and map???
-    let segsArr = [];
-    for (var i = 0; i < segments.length; i++) {
-      let sig = segments[i];
-      let key = sig.from.toLowerCase() + "-" + sig.to.toLowerCase();
-      let href = "#" + key;
-      let tab = "tb" + key;
-      let selected = i == 0;
-      sig = Object.assign(sig, { key, href, tab, selected });
+    let segsArr = segments.map((sg, idx) => {
+      let key = sg.from.toLowerCase() + "-" + sg.to.toLowerCase();
 
-      segsArr.push(sig);
-    }
+      return Object.assign(
+        {},
+        { key, href: "#" + key, tab: "tb" + key, selected: idx == 0 },
+        sg
+      );
+    });
+
+    console.log(segsArr);
 
     return (
       <section>
@@ -29,7 +26,7 @@ class PriceBox extends Component {
             <tr>
               <td></td>
               {segsArr.map(sg => (
-                <th>{sg.key}</th>
+                <th key={sg.key}>{sg.key}</th>
               ))}
               <td>Total</td>
             </tr>
