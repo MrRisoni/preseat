@@ -51,6 +51,7 @@ class SeatsSection extends Component {
             colName={layout[x].name}
             seatContextClasses={el}
             rowId={rowId}
+            actualRow={i}
           />
         );
 
