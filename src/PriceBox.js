@@ -36,7 +36,7 @@ class PriceBox extends Component {
               <tr key={psg.key}>
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
-                  <td>{choice.chosen}</td>
+                  <td>{choice.chosen}{choice.cost}</td>
                 ))}
                 <td>0</td>
               </tr>

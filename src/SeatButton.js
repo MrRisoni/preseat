@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { DataContext } from "./PreSeatContext";
+
 
 class SeatButton extends Component {
-  constructor(props) {
-    super(props);
+ 
+
+
+	static contextType = DataContext; 
+constructor(props) 
+	{
+	super(props);
 
     this.state = { clicked: false };
     this.handleClick = this.handleClick.bind(this);
@@ -13,6 +20,7 @@ class SeatButton extends Component {
       "clicked row" + this.props.actualRow + " col " + this.props.colName
     );
     this.setState({ clicked: true });
+	  this.context.functions.pickSeat({row:this.props.actualRow,col:this.props.colName});
   }
   render() {
     let seatProperties = this.props.seatContextClasses.join(" ");
