@@ -31,11 +31,6 @@ class PreSeatContextProvider extends Component {
         leg: 0
       }
     ],
-    segmentsCost: [
-      { id: 0, total: 15 },
-      { id: 1, total: 15 },
-      { id: 2, total: 15 }
-    ],
 	  activePax:0,
     passengers: [
       {
@@ -53,12 +48,12 @@ class PreSeatContextProvider extends Component {
           {
             segId: 1,
             chosen: "",
-            cost: 0
+            cost: 30
           },
           {
             segId: 2,
             chosen: "",
-            cost: 0
+            cost: 10
           }
         ]
       },
@@ -77,7 +72,7 @@ class PreSeatContextProvider extends Component {
           {
             segId: 1,
             chosen: "",
-            cost: 0
+            cost: 40
           },
           {
             segId: 2,
@@ -172,13 +167,22 @@ class PreSeatContextProvider extends Component {
     });
   };
 
+
+  setActivePax = paxId => {
+    console.log(paxId);
+      this.setState({
+        activePax: paxId.replace( /^\D+/g, '')-1
+      });
+  }
+
   render() {
     return (
       <DataContext.Provider
         value={{
           ...this.state,
           functions: {
-		  pickSeat :this.pickSeat,
+		          pickSeat :this.pickSeat,
+              setActivePax:this.setActivePax,
             updateChosenLang: this.updateChosenLang
           }
         }}

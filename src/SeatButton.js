@@ -7,6 +7,8 @@ class SeatButton extends Component {
 
 
 	static contextType = DataContext;
+
+
 constructor(props)
 	{
 	super(props);
@@ -19,10 +21,13 @@ constructor(props)
     console.log(
       "clicked row" + this.props.actualRow + " col " + this.props.colName
     );
-    this.setState({ clicked: true });
 	  this.context.functions.pickSeat({row:this.props.actualRow,col:this.props.colName,segId:this.props.segId});
+    this.setState({ clicked: true });
+
   }
   render() {
+    let {  passengers} = this.context;
+
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
 
@@ -31,7 +36,19 @@ constructor(props)
       rowNumberDiv = <span className="row-number">{this.props.rowId}</span>;
     }
 
-    if (this.state.clicked) {
+    var seatId = this.props.actualRow + this.props.colName;
+
+
+    var isChosen = false;
+    for (var p =0 ;p < passengers.length; p++) {
+        var selSeat = passengers[p].selection[this.props.segId]['chosen'];
+        if (selSeat == seatId) {
+          isChosen = true;
+          break;
+        }
+    }
+
+    if (isChosen) {
       clsName += " seatChosen ";
     }
 
