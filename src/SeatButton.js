@@ -3,11 +3,11 @@ import { DataContext } from "./PreSeatContext";
 
 
 class SeatButton extends Component {
- 
 
 
-	static contextType = DataContext; 
-constructor(props) 
+
+	static contextType = DataContext;
+constructor(props)
 	{
 	super(props);
 
@@ -20,7 +20,7 @@ constructor(props)
       "clicked row" + this.props.actualRow + " col " + this.props.colName
     );
     this.setState({ clicked: true });
-	  this.context.functions.pickSeat({row:this.props.actualRow,col:this.props.colName});
+	  this.context.functions.pickSeat({row:this.props.actualRow,col:this.props.colName,segId:this.props.segId});
   }
   render() {
     let seatProperties = this.props.seatContextClasses.join(" ");

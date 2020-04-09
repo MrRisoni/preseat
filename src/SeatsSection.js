@@ -48,6 +48,7 @@ class SeatsSection extends Component {
         colsHtml.push(
           <SeatButton
             key={btnKey}
+            segId={this.props.segId}
             colName={layout[x].name}
             seatContextClasses={el}
             rowId={rowId}

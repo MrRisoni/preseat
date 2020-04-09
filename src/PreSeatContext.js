@@ -67,7 +67,7 @@ class PreSeatContextProvider extends Component {
         key: "T2",
         ptc: "ADT",
         name: "Henrik Ibsen",
-        totalCost: 0,
+        totalCost: 20,
         selection: [
           {
             segId: 0,
@@ -157,8 +157,12 @@ class PreSeatContextProvider extends Component {
 	pickSeat = (data) => {
 		console.log('pick seat with args');
 		console.log(data);
-pax = this.state.passengers;
-		pax[this.state.activePax]['selection'][0]
+    let paxes = this.state.passengers;
+	  let foo = paxes[this.state.activePax].selection[data.segId];
+    foo.chosen = data.row + data.col;
+    this.setState({
+      passengers: paxes
+    });
 	}
 
 	updateChosenLang = newLang => {
