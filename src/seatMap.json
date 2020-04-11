@@ -2,6 +2,64 @@
    {
       "segId":0,
       "sections":[
+        {
+          "cabin" :"Υ",
+           "start":5,
+           "end":11,
+           "layout":[
+               {
+                 "name":"A",
+                 "pos":"W"
+              },
+              {
+                 "name":"B",
+                 "pos":"A"
+              },
+              {
+                 "name":"C",
+                 "pos":"A"
+              },
+              {
+                 "name":"D",
+                 "pos":"C"
+              },
+              {
+                 "name":"E",
+                 "pos":"W"
+              }
+            ],
+           "rows":[
+              {
+                 "rowId":13,
+                 "seats":[
+                    {
+                       "props":"LG EX",
+                       "available":0
+                    },
+                    {
+                       "props":"LG",
+                       "available":0
+                    },
+                    {
+                       "props":"LG",
+                       "available":1
+                    },
+                    {
+                       "props":"LG",
+                       "available":1
+                    },
+                    {
+                       "props":"LG",
+                       "available":1
+                    },
+                    {
+                       "props":"LG EX",
+                       "available":1
+                    }
+                 ]
+              }
+           ]
+        },
          {
            "cabin" :"Υ",
             "start":13,
