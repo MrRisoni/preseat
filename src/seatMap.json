@@ -5,7 +5,7 @@
         {
           "cabin" :"Υ",
            "start":5,
-           "end":11,
+           "end":6,
            "layout":[
                {
                  "name":"A",
@@ -63,7 +63,7 @@
          {
            "cabin" :"Υ",
             "start":13,
-            "end":28,
+            "end":14,
             "layout":[
                 {
                   "name":"A",

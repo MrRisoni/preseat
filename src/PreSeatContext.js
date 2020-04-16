@@ -157,7 +157,10 @@ class PreSeatContextProvider extends Component {
     foo.chosen = data.row + data.col;
     this.setState({
       passengers: paxes
-    });
+   });
+
+
+
 	}
 
 	updateChosenLang = newLang => {

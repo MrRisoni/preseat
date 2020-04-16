@@ -30,7 +30,6 @@ class SeatsSection extends Component {
         }
         var el = [];
         if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
-          console.log(seatsData[r].seats[x]);
 
           if (seatsData[r].seats[x].available == 0) {
             el = []; // top priority not available
