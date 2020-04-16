@@ -59,8 +59,7 @@ constructor(props)
 
     return (
       <span>
-        <button
-          type="button"
+        <div
           className={clsName}
           data-toggle="tooltip"
           data-placement="top"
@@ -68,7 +67,7 @@ constructor(props)
           onClick={this.handleClick}
         >
           {this.props.colName}
-        </button>
+        </div>
       </span>
     );
   }
