@@ -1,27 +1,24 @@
 import React, { Component } from "react";
 import { DataContext } from "./PreSeatContext";
 
-
 class SeatButton extends Component {
-	static contextType = DataContext;
+  static contextType = DataContext;
 
-constructor(props)
-	{
-	super(props);
+  constructor(props) {
+    super(props);
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    console.log(
-      "clicked row" + this.props.actualRow + " col " + this.props.colName
-    );
-	  this.context.functions.pickSeat({row:this.props.actualRow,col:this.props.colName,segId:this.props.segId});
-  //  thissetState({ clicked: true });
-
+    this.context.functions.pickSeat({
+      row: this.props.actualRow,
+      col: this.props.colName,
+      segId: this.props.segId
+    });
   }
   render() {
-    let {  passengers} = this.context;
+    let { passengers } = this.context;
 
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
@@ -32,29 +29,18 @@ constructor(props)
     }
 
     var seatId = this.props.actualRow + this.props.colName;
-
-		if (this.props.segId ==0 && this.props.actualRow ==13) {
-			console.log(passengers);
-		}
-
     var isChosen = false;
-    for (var p =0 ;p < passengers.length; p++) {
-        var selSeat = passengers[p].selection[this.props.segId]['chosen'];
-				if (this.props.segId ==0 && this.props.actualRow ==13) {
+    for (var p = 0; p < passengers.length; p++) {
+      var selSeat = passengers[p].selection[this.props.segId]["chosen"];
 
-				console.log('selseat is ' + selSeat);
-}
-        if (selSeat == seatId) {
-					console.log('chosen!!!');
-          isChosen = true;
-          break;
-        }
+      if (selSeat == seatId) {
+        isChosen = true;
+        break;
+      }
     }
 
     if (isChosen) {
       clsName += " seatChosen ";
-				console.log('Adding CLass!!! ' + seatId);
-				console.log(clsName);
     }
 
     return (

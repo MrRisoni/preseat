@@ -4,8 +4,6 @@ import SeatsSection from "./SeatsSection";
 class SeatMap extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {};
   }
 
   render() {

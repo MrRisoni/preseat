@@ -4,12 +4,12 @@ import { DataContext } from "./PreSeatContext";
 class PriceBox extends Component {
   static contextType = DataContext;
 
-  getPassengerClasName(currentPaxId,activePaxId){
-    return (currentPaxId == activePaxId) ? "table-info" : "";
+  getPassengerClasName(currentPaxId, activePaxId) {
+    return currentPaxId == activePaxId ? "table-info" : "";
   }
 
   render() {
-    let { segments, passengers ,currentCurrency,activePax} = this.context;
+    let { segments, passengers, currentCurrency, activePax } = this.context;
 
     let segsArr = segments.map((sg, idx) => {
       let key = sg.from.toLowerCase() + "-" + sg.to.toLowerCase();
@@ -22,17 +22,16 @@ class PriceBox extends Component {
     });
 
     let segmentsCost = [];
-    let overall =0;
-    for (var s =0;s<segments.length; s++) {
-      let ttl =0;
-      for (var p =0;p<passengers.length; p++) {
-          ttl+= passengers[p].selection[s].cost;
-          overall+= passengers[p].selection[s].cost;
-
+    let overall = 0;
+    for (var s = 0; s < segments.length; s++) {
+      let ttl = 0;
+      for (var p = 0; p < passengers.length; p++) {
+        ttl += passengers[p].selection[s].cost;
+        overall += passengers[p].selection[s].cost;
       }
-      segmentsCost.push({key:s,total:ttl});
+      segmentsCost.push({ key: s, total: ttl });
     }
-//  this.context.functions
+    //  this.context.functions
     return (
       <section>
         <table className="table table-bordered">
@@ -46,13 +45,23 @@ class PriceBox extends Component {
             </tr>
           </thead>
           <tbody>
-            {passengers.map((psg,pxId) => (
-              <tr className={ this.getPassengerClasName(pxId,activePax) } key={psg.key}>
+            {passengers.map((psg, pxId) => (
+              <tr
+                className={this.getPassengerClasName(pxId, activePax)}
+                key={psg.key}
+              >
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
                   <td>{choice.chosen}</td>
                 ))}
-                <td><button className="btn btn-sm btn-primary" onClick={() => this.context.functions.setActivePax(psg.key)}>Select</button></td>
+                <td>
+                  <button
+                    className="btn btn-sm btn-primary"
+                    onClick={() => this.context.functions.setActivePax(psg.key)}
+                  >
+                    Select
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -73,17 +82,25 @@ class PriceBox extends Component {
               <tr key={psg.key}>
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
-                  <td>{choice.cost} {currentCurrency.code}</td>
+                  <td>
+                    {choice.cost} {currentCurrency.code}
+                  </td>
                 ))}
-                <td>{psg.totalCost} {currentCurrency.code}</td>
+                <td>
+                  {psg.totalCost} {currentCurrency.code}
+                </td>
               </tr>
             ))}
             <tr>
               <td>Total</td>
               {segmentsCost.map(sgc => (
-                <td>{sgc.total} {currentCurrency.code}</td>
+                <td>
+                  {sgc.total} {currentCurrency.code}
+                </td>
               ))}
-              <td>{overall} {currentCurrency.code}</td>
+              <td>
+                {overall} {currentCurrency.code}
+              </td>
             </tr>
           </tbody>
         </table>

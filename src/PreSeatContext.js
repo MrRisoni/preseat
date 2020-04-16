@@ -31,7 +31,7 @@ class PreSeatContextProvider extends Component {
         leg: 0
       }
     ],
-	  activePax:0,
+    activePax: 0,
     passengers: [
       {
         id: 0,
@@ -149,34 +149,26 @@ class PreSeatContextProvider extends Component {
     }
   };
 
-	pickSeat = (data) => {
-		console.log('pick seat with args');
-		console.log(data);
+  pickSeat = data => {
     let paxes = this.state.passengers;
-	  let foo = paxes[this.state.activePax].selection[data.segId];
+    let foo = paxes[this.state.activePax].selection[data.segId];
     foo.chosen = data.row + data.col;
     this.setState({
       passengers: paxes
-   });
+    });
+  };
 
-
-
-	}
-
-	updateChosenLang = newLang => {
-    console.log("new lan is " + newLang);
+  updateChosenLang = newLang => {
     this.setState({
       lang: newLang
     });
   };
 
-
   setActivePax = paxId => {
-    console.log(paxId);
-      this.setState({
-        activePax: paxId.replace( /^\D+/g, '')-1
-      });
-  }
+    this.setState({
+      activePax: paxId.replace(/^\D+/g, "") - 1
+    });
+  };
 
   render() {
     return (
@@ -184,8 +176,8 @@ class PreSeatContextProvider extends Component {
         value={{
           ...this.state,
           functions: {
-		          pickSeat :this.pickSeat,
-              setActivePax:this.setActivePax,
+            pickSeat: this.pickSeat,
+            setActivePax: this.setActivePax,
             updateChosenLang: this.updateChosenLang
           }
         }}
