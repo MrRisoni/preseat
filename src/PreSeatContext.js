@@ -175,6 +175,7 @@ class PreSeatContextProvider extends Component {
     let paxes = this.state.passengers;
     for (var s = 0; s < paxes[realId].selection.length; s++) {
       paxes[realId].selection[s].chosen = "";
+      paxes[realId].selection[s].cost = 0;
     }
     console.log(paxes);
     this.setState({

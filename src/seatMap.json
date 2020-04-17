@@ -34,7 +34,8 @@
                  "seats":[
                     {
                        "props":"LG EX",
-                       "available":0
+                       "available":0,
+                       "pricing" :"4gDQXDj8R1S9"
                     },
                     {
                        "props":"LG",
