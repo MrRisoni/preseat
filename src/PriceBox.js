@@ -61,6 +61,13 @@ class PriceBox extends Component {
                   >
                     Select
                   </button>
+
+                  <button
+                    className="btn btn-sm btn-primary"
+                    onClick={() => this.context.functions.clearSeats(psg.key)}
+                  >
+                    Clear All
+                  </button>
                 </td>
               </tr>
             ))}

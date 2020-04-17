@@ -169,6 +169,18 @@ class PreSeatContextProvider extends Component {
       activePax: paxId.replace(/^\D+/g, "") - 1
     });
   };
+  clearSeats = paxId => {
+    var realId = paxId.replace(/^\D+/g, "") - 1;
+    console.log(realId);
+    let paxes = this.state.passengers;
+    for (var s = 0; s < paxes[realId].selection.length; s++) {
+      paxes[realId].selection[s].chosen = "";
+    }
+    console.log(paxes);
+    this.setState({
+      passengers: paxes
+    });
+  };
 
   render() {
     return (
@@ -176,6 +188,7 @@ class PreSeatContextProvider extends Component {
         value={{
           ...this.state,
           functions: {
+            clearSeats: this.clearSeats,
             pickSeat: this.pickSeat,
             setActivePax: this.setActivePax,
             updateChosenLang: this.updateChosenLang
