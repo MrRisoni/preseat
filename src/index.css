@@ -12,6 +12,10 @@ body {
   width: 35px;
 }
 
+.seatLegRoom {
+  background-color: #ff0066;
+}
+
 .seatChosen {
   background-color: yellow;
   color: black;
@@ -22,6 +26,13 @@ body {
   background-color: #efefef;
   color: white;
   pointer-events: none;
+}
+
+.seatNotExists {
+  background-color: white;
+  color: white;
+  pointer-events: none;
+  border:none;
 }
 
 .emergegencyExit {

@@ -1,0 +1,482 @@
+[
+   {
+      "segId":0,
+      "sections":[
+        {
+          "cabin" :"Υ",
+           "start":5,
+           "end":12,
+           "layout":[
+               {
+                 "name":"A",
+                 "pos":"W"
+              },
+              {
+                 "name":"B",
+                 "pos":"A"
+              },
+              {
+                 "name":"C",
+                 "pos":"A"
+              },
+              {
+                 "name":"D",
+                 "pos":"C"
+              },
+              {
+                 "name":"E",
+                 "pos":"W"
+              }
+            ],
+           "rows":[
+              {
+                 "rowId":5,
+                 "seats":[
+                    {
+                       "props":" EX LG",
+                       "available":0,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG EX",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    }
+                 ]
+              },
+              {
+                 "rowId":6,
+                 "seats":[
+                    {
+                       "props":"LG ",
+                       "available":0,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":" LG",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    }
+                 ]
+              },
+              {
+                 "rowId":7,
+                 "seats":[
+                    {
+                       "props":"",
+                       "available":0,
+                       "pricing" :"4gDQXDj8R1S9"
+
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":" ",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    }
+                 ]
+              },
+              {
+                 "rowId":8,
+                 "seats":[
+                                      {
+                       "props":"",
+                       "available":0,
+                       "pricing" :"4gDQXDj8R1S9"
+
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":"",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    },
+                    {
+                       "props":" ",
+                       "available":1,
+                       "pricing" :"4gDQXDj8R1S9"
+                    }
+                 ]
+              },    {
+                     "rowId":9,
+                     "seats":[
+
+                        {
+                           "props":"",
+                           "available":0,
+                           "pricing" :"4gDQXDj8R1S9"
+
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":" ",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        }
+                     ]
+                  },
+                  {
+                     "rowId":10,
+                     "seats":[
+                                              {
+                           "props":"",
+                           "available":0,
+                           "pricing" :"4gDQXDj8R1S9"
+
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":"",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        },
+                        {
+                           "props":" ",
+                           "available":1,
+                           "pricing" :"4gDQXDj8R1S9"
+                        }
+                     ]
+                  },    {
+                         "rowId":11,
+                         "seats":[
+
+                            {
+                               "props":"",
+                               "available":0,
+                               "pricing" :"4gDQXDj8R1S9"
+
+                            },
+                            {
+                               "props":"",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":"",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":"",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":" ",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            }
+                         ]
+                      },
+                      {
+                         "rowId":12,
+                         "seats":[
+
+                            {
+                               "props":"",
+                               "available":0,
+                               "pricing" :"4gDQXDj8R1S9"
+
+                            },
+                            {
+                               "props":"",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":"NO",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":"",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            },
+                            {
+                               "props":" ",
+                               "available":1,
+                               "pricing" :"4gDQXDj8R1S9"
+                            }
+                         ]
+                      }
+           ]
+        },
+         {
+           "cabin" :"Υ",
+            "start":14,
+            "end":23,
+            "layout":[
+                {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"W"
+               }
+             ],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":"LG EX",
+                        "available":0
+                     },
+                     {
+                        "props":"LG",
+                        "available":0
+                     },
+                     {
+                        "props":"LG",
+                        "available":1
+                     },
+                     {
+                        "props":"LG",
+                        "available":1
+                     },
+                     {
+                        "props":"LG",
+                        "available":1
+                     },
+                     {
+                        "props":"LG EX",
+                        "available":1
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ]
+   },
+   {
+      "segId":1,
+      "sections":[
+         {
+           "cabin" :"Υ",
+            "start":13,
+            "end":28,
+            "layout":[
+                {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"W"
+               }
+             ],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ]
+   },
+   {
+      "segId":2,
+      "sections":[
+         {
+           "cabin" :"Υ",
+            "start":13,
+            "end":28,
+            "layout":[
+                {
+                  "name":"A",
+                  "pos":"W"
+               },
+               {
+                  "name":"B",
+                  "pos":"C"
+               },
+               {
+                  "name":"C",
+                  "pos":"A"
+               },
+               {
+                  "name":"D",
+                  "pos":"A"
+               },
+               {
+                  "name":"E",
+                  "pos":"C"
+               },
+               {
+                  "name":"F",
+                  "pos":"C"
+               },
+               {
+                  "name":"G",
+                  "pos":"A"
+               },
+               {
+                  "name":"H",
+                  "pos":"A"
+               },
+               {
+                  "name":"I",
+                  "pos":"C"
+               },
+               {
+                  "name":"J",
+                  "pos":"W"
+               }
+             ],
+            "rows":[
+               {
+                  "rowId":13,
+                  "seats":[
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     },
+                     {
+                        "props":" EX",
+                        "available":1
+                     }
+                  ]
+               }
+            ]
+         }
+
+      ]
+   }
+]

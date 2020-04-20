@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-const seatMaps = require("./seatMap");
+const seatMaps = require("./seatMapLayout");
 import SegmentTabs from "./SegmentTabs";
 import PriceBox from "./PriceBox";
 import { DataContext } from "./PreSeatContext";

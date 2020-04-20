@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SeatButton from "./SeatButton";
 
-// https://www.seatguru.com/airlines/Lufthansa/Lufthansa_Airbus_A330-300_B.php
 
 class SeatsSection extends Component {
   constructor(props) {
@@ -20,9 +19,10 @@ class SeatsSection extends Component {
     let seatsData = this.props.data.rows;
 
     let r = -1;
-    for (let i = start; i < finish; i++) {
+    for (let i = start; i <= finish; i++) {
       let colsHtml = [];
       r++;
+      var mapRowId = 0;
       for (let x = 0; x < layout.length; x++) {
         let rowId = 0;
         if (x > 0 && layout[x].pos == "A" && layout[x + 1].pos == "A") {
@@ -30,17 +30,29 @@ class SeatsSection extends Component {
         }
         var el = [];
         if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
+   mapRowId = seatsData[r].rowId;
+
+   if ( seatsData[r].seats[x].props.indexOf("LG") >-1) {
+       el.push("seatLegRoom");
+   }
 
           if (seatsData[r].seats[x].available == 0) {
             el = []; // top priority not available
             el.push("seatNotAvailable");
           }
 
-          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") > 0) {
+          if ( seatsData[r].seats[x].props.indexOf("NO") >-1) {
+            el = []; // top priority not available
+            el.push("seatNotExists");
+          }
+
+          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") >-1) {
             var exitClass = " emergencyExit emergencyLeft";
 
             colsHtml.push(<div className={exitClass}></div>);
           }
+
+
         }
 
         btnKey = "stBtn_" + i + layout[x].name;
@@ -68,7 +80,7 @@ class SeatsSection extends Component {
         if (rowId > 0) {
           colsHtml.push(
             <span className="row-number">
-              <p>{rowId}</p>
+              <p>{mapRowId}</p>
             </span>
           );
         }

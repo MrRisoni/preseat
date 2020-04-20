@@ -11,6 +11,14 @@ export const DataContext = createContext();
 
 class PreSeatContextProvider extends Component {
   state = {
+    pricingInfo :
+    {
+      "g1frlzYN9cMJ": 25,
+    "4gDQXDj8R1S9": 30,
+    "DlRZ1o65RsIw": 10,
+    "MAlbfML85mvs": 25,
+    "G6xCQRkVfrN6": 15,
+    "a9gD3oYqDh1r": 30},
     segments: [
       {
         id: 0,
@@ -153,6 +161,7 @@ class PreSeatContextProvider extends Component {
     let paxes = this.state.passengers;
     let foo = paxes[this.state.activePax].selection[data.segId];
     foo.chosen = data.row + data.col;
+    foo.cost = 34;
     this.setState({
       passengers: paxes
     });
