@@ -6,8 +6,7 @@ class LangCurrencySelector extends Component {
 
   render() {
 
-    let {languages, currentLang,currencies } = this.context;
-
+    let {languages, currentLang,currencies ,currentCurrency} = this.context;
 
     return (
       <section id="selectors">
@@ -15,7 +14,7 @@ class LangCurrencySelector extends Component {
               <div className="col-6">
               <select className="form-control">
                  {languages.map(lang => (
-                      <option key={lang.key}>{lang.title}</option>
+                      <option selected={lang.code==currentLang} key={lang.code}>{lang.title}</option>
 
                    ))}
 
@@ -24,7 +23,7 @@ class LangCurrencySelector extends Component {
               <div className="col-6">
               <select className="form-control">
               {currencies.map(cur => (
-                   <option key={cur.code}>{cur.code}</option>
+                   <option selected={cur.code==currentCurrency.code} key={cur.code}>{cur.code}</option>
 
                 ))}
 </select>
