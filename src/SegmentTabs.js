@@ -56,7 +56,11 @@ class SegmentTabs extends Component {
                     role="tabpanel"
                     aria-labelledby={sgx.tab}
                   >
-                    <SeatMap key={sgx.key} segId={sgx.id} stmp={this.props.stmp[sgx.id]} />
+                    <SeatMap
+                      key={sgx.key}
+                      segId={sgx.id}
+                      stmp={this.props.stmp[sgx.id]}
+                    />
                   </div>
                 );
               })}

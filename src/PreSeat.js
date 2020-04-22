@@ -3,7 +3,6 @@ const seatMaps = require("./seatMapLayout");
 import SegmentTabs from "./SegmentTabs";
 import PriceBox from "./PriceBox";
 import LangCurrencySelector from "./LangCurrencySelector";
-
 import { DataContext } from "./PreSeatContext";
 
 class PreSeat extends Component {
@@ -12,7 +11,7 @@ class PreSeat extends Component {
   render() {
     return (
       <main>
-       <LangCurrencySelector/>
+        <LangCurrencySelector />
         <PriceBox />
         <SegmentTabs stmp={seatMaps} />
       </main>

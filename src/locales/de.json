@@ -1,11 +1,8 @@
 {
-  "LG" : "Extra Legroom",
-  "EX" : "Emergency Exit",
-  "DS" : "Discount",
-    "General" : {
-      "Passengers" : "Passagiere"
-
-    
+  "LG": "Extra Legroom",
+  "EX": "Emergency Exit",
+  "DS": "Discount",
+  "General": {
+    "Passengers": "Passagiere"
   }
-
 }

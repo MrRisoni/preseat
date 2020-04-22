@@ -31,7 +31,7 @@ class PriceBox extends Component {
       }
       segmentsCost.push({ key: s, total: ttl });
     }
-    //  this.context.functions
+
     return (
       <section>
         <table className="table table-bordered">

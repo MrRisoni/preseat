@@ -1,5 +1,4 @@
 import React, { Component, createContext } from "react";
-
 import Russian from "./locales/ru.json";
 import German from "./locales/de.json";
 import French from "./locales/fr.json";
@@ -11,12 +10,12 @@ export const DataContext = createContext();
 class PreSeatContextProvider extends Component {
   state = {
     pricingInfo: {
-      "g1frlzYN9cMJ": 25,
+      g1frlzYN9cMJ: 25,
       "4gDQXDj8R1S9": 35,
-      "DlRZ1o65RsIw": 10,
-      "MAlbfML85mvs": 20,
-      "G6xCQRkVfrN6": 15,
-      "a9gD3oYqDh1r": 30
+      DlRZ1o65RsIw: 10,
+      MAlbfML85mvs: 20,
+      G6xCQRkVfrN6: 15,
+      a9gD3oYqDh1r: 30
     },
     segments: [
       {
@@ -48,19 +47,19 @@ class PreSeatContextProvider extends Component {
         totalCost: 0,
         selection: [
           {
-                key:'T1S1',
+            key: "T1S1",
             segId: 0,
             chosen: "Heu",
             cost: 0
           },
           {
-              key:'T1S2',
+            key: "T1S2",
             segId: 1,
             chosen: "",
             cost: 30
           },
           {
-            key:'T1S3',
+            key: "T1S3",
             segId: 2,
             chosen: "",
             cost: 10
@@ -75,19 +74,19 @@ class PreSeatContextProvider extends Component {
         totalCost: 20,
         selection: [
           {
-            key:'T2S1',
+            key: "T2S1",
             segId: 0,
             chosen: "",
             cost: 0
           },
           {
-            key:'T2S2',
+            key: "T2S2",
             segId: 1,
             chosen: "",
             cost: 40
           },
           {
-            key:'T2S3',
+            key: "T2S3",
             segId: 2,
             chosen: "",
             cost: 0
@@ -147,7 +146,7 @@ class PreSeatContextProvider extends Component {
         rate: 10.94
       }
     ],
-    currentLang: 'en',
+    currentLang: "en",
     currentCurrency: {
       code: "EUR",
       rate: 1.0
@@ -158,7 +157,7 @@ class PreSeatContextProvider extends Component {
     let paxes = this.state.passengers;
     let foo = paxes[this.state.activePax].selection[data.segId];
     foo.chosen = data.row + data.col;
-    console.log('clicked on ' + this.state.pricingInfo[data.pricingKey]);
+    console.log("clicked on " + this.state.pricingInfo[data.pricingKey]);
     foo.cost = 34;
     this.setState({
       passengers: paxes
