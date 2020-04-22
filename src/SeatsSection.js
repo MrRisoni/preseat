@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SeatButton from "./SeatButton";
 
-
 class SeatsSection extends Component {
   constructor(props) {
     super(props);
@@ -29,39 +28,41 @@ class SeatsSection extends Component {
           rowId = i;
         }
         var el = [];
+        var tooltip = [];
         if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
-   mapRowId = seatsData[r].rowId;
+          mapRowId = seatsData[r].rowId;
 
-   if ( seatsData[r].seats[x].props.indexOf("LG") >-1) {
-       el.push("seatLegRoom");
-   }
+          if (seatsData[r].seats[x].props.indexOf("LG") > -1) {
+            el.push("seatLegRoom");
+          }
 
           if (seatsData[r].seats[x].available == 0) {
             el = []; // top priority not available
             el.push("seatNotAvailable");
           }
 
-          if ( seatsData[r].seats[x].props.indexOf("NO") >-1) {
+          if (seatsData[r].seats[x].props.indexOf("NO") > -1) {
             el = []; // top priority not available
             el.push("seatNotExists");
           }
 
-          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") >-1) {
+          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") > -1) {
             var exitClass = " emergencyExit emergencyLeft";
 
             colsHtml.push(<div className={exitClass}></div>);
           }
-
-
         }
 
         btnKey = "stBtn_" + i + layout[x].name;
+        var pricingKey = (seatsData[r].seats[x].pricingKey !== undefined) ? seatsData[r].seats[x].pricingKey  : 'ff';
+        console.log('price key ' + pricingKey);
         colsHtml.push(
           <SeatButton
             key={btnKey}
             segId={this.props.segId}
             colName={layout[x].name}
             seatContextClasses={el}
+            pricingKey={pricingKey}
             rowId={rowId}
             actualRow={i}
           />

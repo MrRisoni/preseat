@@ -2,294 +2,18 @@
    {
       "segId":0,
       "sections":[
-        {
-          "cabin" :"Υ",
-           "start":5,
-           "end":12,
-           "layout":[
-               {
-                 "name":"A",
-                 "pos":"W"
-              },
-              {
-                 "name":"B",
-                 "pos":"A"
-              },
-              {
-                 "name":"C",
-                 "pos":"A"
-              },
-              {
-                 "name":"D",
-                 "pos":"C"
-              },
-              {
-                 "name":"E",
-                 "pos":"W"
-              }
-            ],
-           "rows":[
-              {
-                 "rowId":5,
-                 "seats":[
-                    {
-                       "props":" EX LG",
-                       "available":0,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG EX",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    }
-                 ]
-              },
-              {
-                 "rowId":6,
-                 "seats":[
-                    {
-                       "props":"LG ",
-                       "available":0,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":" LG",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    }
-                 ]
-              },
-              {
-                 "rowId":7,
-                 "seats":[
-                    {
-                       "props":"",
-                       "available":0,
-                       "pricing" :"4gDQXDj8R1S9"
-
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":" ",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    }
-                 ]
-              },
-              {
-                 "rowId":8,
-                 "seats":[
-                                      {
-                       "props":"",
-                       "available":0,
-                       "pricing" :"4gDQXDj8R1S9"
-
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":"",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    },
-                    {
-                       "props":" ",
-                       "available":1,
-                       "pricing" :"4gDQXDj8R1S9"
-                    }
-                 ]
-              },    {
-                     "rowId":9,
-                     "seats":[
-
-                        {
-                           "props":"",
-                           "available":0,
-                           "pricing" :"4gDQXDj8R1S9"
-
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":" ",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        }
-                     ]
-                  },
-                  {
-                     "rowId":10,
-                     "seats":[
-                                              {
-                           "props":"",
-                           "available":0,
-                           "pricing" :"4gDQXDj8R1S9"
-
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":"",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        },
-                        {
-                           "props":" ",
-                           "available":1,
-                           "pricing" :"4gDQXDj8R1S9"
-                        }
-                     ]
-                  },    {
-                         "rowId":11,
-                         "seats":[
-
-                            {
-                               "props":"",
-                               "available":0,
-                               "pricing" :"4gDQXDj8R1S9"
-
-                            },
-                            {
-                               "props":"",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":"",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":"",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":" ",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            }
-                         ]
-                      },
-                      {
-                         "rowId":12,
-                         "seats":[
-
-                            {
-                               "props":"",
-                               "available":0,
-                               "pricing" :"4gDQXDj8R1S9"
-
-                            },
-                            {
-                               "props":"",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":"NO",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":"",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            },
-                            {
-                               "props":" ",
-                               "available":1,
-                               "pricing" :"4gDQXDj8R1S9"
-                            }
-                         ]
-                      }
-           ]
-        },
          {
-           "cabin" :"Υ",
-            "start":14,
-            "end":23,
+            "cabin":"Υ",
+            "start":5,
+            "end":12,
             "layout":[
-                {
+               {
                   "name":"A",
                   "pos":"W"
                },
                {
                   "name":"B",
-                  "pos":"C"
+                  "pos":"A"
                },
                {
                   "name":"C",
@@ -297,61 +21,267 @@
                },
                {
                   "name":"D",
-                  "pos":"A"
-               },
-               {
-                  "name":"E",
                   "pos":"C"
                },
                {
-                  "name":"F",
+                  "name":"E",
                   "pos":"W"
                }
-             ],
+            ],
             "rows":[
                {
-                  "rowId":13,
+                  "rowId":5,
                   "seats":[
                      {
+                        "props":" EX LG",
+                        "available":0,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     },
+                     {
+                        "props":"LG",
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     },
+                     {
+                        "props":"LG",
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     },
+                     {
+                        "props":"LG",
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     },
+                     {
                         "props":"LG EX",
-                        "available":0
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     }
+                  ]
+               },
+               {
+                  "rowId":6,
+                  "seats":[
+                     {
+                        "props":"LG ",
+                        "available":0,
+                        "pricingKey":"4gDQXDj8R1S9"
                      },
                      {
                         "props":"LG",
-                        "available":0
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
                      },
                      {
                         "props":"LG",
-                        "available":1
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
                      },
                      {
                         "props":"LG",
-                        "available":1
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
                      },
                      {
-                        "props":"LG",
-                        "available":1
+                        "props":" LG",
+                        "available":1,
+                        "pricingKey":"4gDQXDj8R1S9"
+                     }
+                  ]
+               },
+               {
+                  "rowId":7,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
                      },
                      {
-                        "props":"LG EX",
-                        "available":1
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     }
+                  ]
+               },
+               {
+                  "rowId":8,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     }
+                  ]
+               },
+               {
+                  "rowId":9,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     }
+                  ]
+               },
+               {
+                  "rowId":10,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     }
+                  ]
+               },
+               {
+                  "rowId":11,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     }
+                  ]
+               },
+               {
+                  "rowId":12,
+                  "seats":[
+                     {
+                        "props":"",
+                        "available":0,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"NO",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":"",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
+                     },
+                     {
+                        "props":" ",
+                        "available":1,
+                        "pricingKey":"MAlbfML85mvs"
                      }
                   ]
                }
             ]
          }
-
       ]
    },
    {
       "segId":1,
       "sections":[
          {
-           "cabin" :"Υ",
+            "cabin":"Υ",
             "start":13,
-            "end":28,
+            "end":9,
             "layout":[
-                {
+               {
                   "name":"A",
                   "pos":"W"
                },
@@ -375,7 +305,7 @@
                   "name":"F",
                   "pos":"W"
                }
-             ],
+            ],
             "rows":[
                {
                   "rowId":13,
@@ -400,18 +330,17 @@
                }
             ]
          }
-
       ]
    },
    {
       "segId":2,
       "sections":[
          {
-           "cabin" :"Υ",
+            "cabin":"Υ",
             "start":13,
-            "end":28,
+            "end":1,
             "layout":[
-                {
+               {
                   "name":"A",
                   "pos":"W"
                },
@@ -451,7 +380,7 @@
                   "name":"J",
                   "pos":"W"
                }
-             ],
+            ],
             "rows":[
                {
                   "rowId":13,
@@ -476,7 +405,6 @@
                }
             ]
          }
-
       ]
    }
 ]

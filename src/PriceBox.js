@@ -37,11 +37,11 @@ class PriceBox extends Component {
         <table className="table table-bordered">
           <thead>
             <tr>
-              <td></td>
+              <td>Passengers</td>
               {segsArr.map(sg => (
                 <th key={sg.key}>{sg.key}</th>
               ))}
-              <td></td>
+              <td>Actions</td>
             </tr>
           </thead>
           <tbody>
@@ -52,11 +52,11 @@ class PriceBox extends Component {
               >
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
-                  <td>{choice.chosen}</td>
+                  <td key={choice.chosen}>{choice.chosen}</td>
                 ))}
                 <td>
                   <button
-                    className="btn btn-sm btn-primary"
+                    className="btn btn-sm btn-primary selectPaxBtn"
                     onClick={() => this.context.functions.setActivePax(psg.key)}
                   >
                     Select
@@ -89,7 +89,7 @@ class PriceBox extends Component {
               <tr key={psg.key}>
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
-                  <td>
+                  <td key={choice.key}>
                     {choice.cost} {currentCurrency.code}
                   </td>
                 ))}
