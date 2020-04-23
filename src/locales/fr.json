@@ -1,8 +1,11 @@
 {
   "LG": "Extra Legroom",
   "EX": "Emergency Exit",
-  "DS": "Discount",
   "General": {
-    "Passengers": "Passagers"
+    "Passengers": "Passagers",
+    "Select" : "Choisir",
+      "ClearAll" : "Réinitialiser",
+        "Submit" : "Soumettre"
+
   }
 }

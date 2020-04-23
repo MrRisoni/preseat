@@ -1,8 +1,11 @@
 {
   "LG": "Extra Legroom",
   "EX": "Emergency Exit",
-  "DS": "Discount",
   "General": {
-    "Passengers": "Пассажиры"
+    "Passengers": "Пассажиры",
+    "Select" : "Выбрать",
+      "ClearAll" : "сброс",
+        "Submit" : "утверждать"
+
   }
 }

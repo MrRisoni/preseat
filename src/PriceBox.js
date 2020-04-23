@@ -9,7 +9,7 @@ class PriceBox extends Component {
   }
 
   render() {
-    let { segments, passengers, currentCurrency, activePax } = this.context;
+    let { segments, passengers, currentCurrency, activePax ,currentLang ,translations} = this.context;
 
     let segsArr = segments.map((sg, idx) => {
       let key = sg.from.toLowerCase() + "-" + sg.to.toLowerCase();
@@ -37,7 +37,7 @@ class PriceBox extends Component {
         <table className="table table-bordered">
           <thead>
             <tr>
-              <td>Passengers</td>
+              <td>{translations[currentLang].General.Passengers}</td>
               {segsArr.map(sg => (
                 <th key={sg.key}>{sg.key}</th>
               ))}
@@ -46,9 +46,8 @@ class PriceBox extends Component {
           </thead>
           <tbody>
             {passengers.map((psg, pxId) => (
-              <tr
+              <tr key={psg.key}
                 className={this.getPassengerClasName(pxId, activePax)}
-                key={psg.key}
               >
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
@@ -59,14 +58,14 @@ class PriceBox extends Component {
                     className="btn btn-sm btn-primary selectPaxBtn"
                     onClick={() => this.context.functions.setActivePax(psg.key)}
                   >
-                    Select
+                    {translations[currentLang].General.Select}
                   </button>
 
                   <button
                     className="btn btn-sm btn-primary"
                     onClick={() => this.context.functions.clearSeats(psg.key)}
                   >
-                    Clear All
+                    {translations[currentLang].General.ClearAll}
                   </button>
                 </td>
               </tr>

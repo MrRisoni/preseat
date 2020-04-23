@@ -94,7 +94,6 @@ class PreSeatContextProvider extends Component {
         ]
       }
     ],
-    lang: "ru",
     languages: [
       {
         code: "ru",
@@ -166,7 +165,7 @@ class PreSeatContextProvider extends Component {
 
   updateChosenLang = newLang => {
     this.setState({
-      lang: newLang
+      currentLang: newLang
     });
   };
 

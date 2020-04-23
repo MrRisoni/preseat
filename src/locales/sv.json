@@ -1,8 +1,12 @@
 {
   "LG": "Extra Legroom",
   "EX": "Emergency Exit",
-  "DS": "Discount",
   "General": {
-    "Passengers": "Passagerare"
+    "Passengers": "Passagerare",
+    "Select" : "Välj",
+      "ClearAll" : "Nyinfatta",
+        "Submit" : "Skicka in"
+
+
   }
 }
