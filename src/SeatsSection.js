@@ -8,6 +8,25 @@ class SeatsSection extends Component {
     this.state = {};
   }
 
+ checkEmergencyExit(data)
+ {
+   var seatsData = data.seatsData;
+   var layoutLen = data.layoutLen;
+   var rowIndex = data.rowIndex;
+   var seatIndex = data.seatIndex;
+
+   if (seatsData[rowIndex] !== undefined && seatsData[rowIndex].seats[seatIndex] !== undefined) {
+     if (
+       seatIndex === layoutLen - 1 &&
+       seatsData[rowIndex].seats[seatIndex].props.indexOf("EX") > -1
+     ) {
+       console.log('YESS');
+       return true;
+     }
+   }
+   return false;
+ }
+
   render() {
     let seatsHtml = [];
 
@@ -16,7 +35,7 @@ class SeatsSection extends Component {
     let start = this.props.data.start;
     let finish = this.props.data.end;
     let seatsData = this.props.data.rows;
-
+    var exitClass = '';
     let r = -1;
     for (let i = start; i <= finish; i++) {
       let colsHtml = [];
@@ -24,7 +43,7 @@ class SeatsSection extends Component {
       var mapRowId = 0;
       for (let x = 0; x < layout.length; x++) {
         let rowId = 0;
-        if (x > 0 && layout[x].pos == "A" && layout[x + 1].pos == "A") {
+        if (x > 0 && layout[x].pos === "A" && layout[x + 1].pos === "A") {
           rowId = i;
         }
         var el = [];
@@ -34,31 +53,39 @@ class SeatsSection extends Component {
 
           if (seatsData[r].seats[x].props.indexOf("LG") > -1) {
             el.push("seatLegRoom");
+            tooltip.push('LG');
           }
 
-          if (seatsData[r].seats[x].available == 0) {
+          if (seatsData[r].seats[x].available === 0) {
             el = []; // top priority not available
             el.push("seatNotAvailable");
           }
 
           if (seatsData[r].seats[x].props.indexOf("NO") > -1) {
-            el = []; // top priority not available
+            tooltip = el = []; // top priority not available
             el.push("seatNotExists");
           }
 
-          if (x == 0 && seatsData[r].seats[x].props.indexOf("EX") > -1) {
-            var exitClass = " emergencyExit emergencyLeft";
-
+          if (x === 0 && seatsData[r].seats[x].props.indexOf("EX") > -1) {
+            exitClass = " emergencyExit emergencyLeft";
+            tooltip.push('EX');
             colsHtml.push(<div className={exitClass}></div>);
           }
+
+        if (this.checkEmergencyExit( {seatsData,layoutLen:layout.length, r,x})) {
+         tooltip.push('EX');
+         }
+
+
         }
 
         btnKey = "stBtn_" + i + layout[x].name;
         var pricingKey = (seatsData[r].seats[x].pricingKey !== undefined) ? seatsData[r].seats[x].pricingKey  : 'ff';
-        console.log('price key ' + pricingKey);
+
         colsHtml.push(
           <SeatButton
             key={btnKey}
+            tooltips={tooltip}
             segId={this.props.segId}
             colName={layout[x].name}
             seatContextClasses={el}
@@ -68,16 +95,23 @@ class SeatsSection extends Component {
           />
         );
 
-        if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
+      /*  if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
           if (
-            x == layout.length - 1 &&
-            seatsData[r].seats[x].props.indexOf("EX") > 0
+            x === layout.length - 1 &&
+            seatsData[r].seats[x].props.indexOf("EX") > -1
           ) {
-            var exitClass = " emergencyExit emergencyRight";
+            exitClass = " emergencyExit emergencyRight";
 
             colsHtml.push(<div className={exitClass}></div>);
           }
-        }
+        } */
+
+        if (this.checkEmergencyExit( {seatsData,layoutLen:layout.length, r,x})) {
+          exitClass = " emergencyExit emergencyRight";
+
+          colsHtml.push(<div className={exitClass}></div>);
+         }
+
         if (rowId > 0) {
           colsHtml.push(
             <span className="row-number">

@@ -41,11 +41,10 @@ class LangCurrencySelector extends Component {
       <section id="selectors">
         <div className="row">
           <div className="col-4">
-            <select className="form-control" onChange={this.changeLang}>
+            <select defaultValue={currentLang} className="form-control" onChange={this.changeLang}>
               {languages.map(lang => (
                 <option
                   value={lang.code}
-                  selected={lang.code == currentLang}
                   key={lang.code}
                 >
                   {lang.title}
@@ -54,11 +53,10 @@ class LangCurrencySelector extends Component {
             </select>
           </div>
           <div className="col-4">
-            <select className="form-control" onChange={this.changeCurrency}>
+            <select defaultValue={currentCurrency.code} className="form-control" onChange={this.changeCurrency}>
               {currencies.map(cur => (
                 <option
                   value={cur.code}
-                  selected={cur.code == currentCurrency.code}
                   key={cur.code}
                 >
                   {cur.code}

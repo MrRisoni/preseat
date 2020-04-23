@@ -30,17 +30,17 @@ class SeatButton extends Component {
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
 
-    let rowNumberDiv = <span />;
+  /*  let rowNumberDiv = <span />;
     if (this.props.rowId > 0) {
       rowNumberDiv = <span className="row-number">{this.props.rowId}</span>;
-    }
+    } */
 
     var seatId = this.props.actualRow + this.props.colName;
     var isChosen = false;
     for (var p = 0; p < passengers.length; p++) {
       var selSeat = passengers[p].selection[this.props.segId]["chosen"];
 
-      if (selSeat == seatId) {
+      if (selSeat === seatId) {
         isChosen = true;
         break;
       }
@@ -49,15 +49,20 @@ class SeatButton extends Component {
     if (isChosen) {
       clsName += " seatChosen ";
     }
-    var price = pricingInfo[this.props.pricingKey] + " " + currentCurrency.code;
-    price += " " + translations["ru"].LG;
+    var tip = [pricingInfo[this.props.pricingKey] + " " + currentCurrency.code];
+    if (this.props.tooltips.indexOf('LG') > -1) {
+        tip.push(translations[currentLang].LG);
+    }
+    if (this.props.tooltips.indexOf('EX') > -1) {
+        tip.push(translations[currentLang].EX);
+    }
     return (
       <span>
         <div
           className={clsName}
           data-toggle="tooltip"
           data-placement="top"
-          title={price}
+          title={tip.join(' ')}
           onClick={this.handleClick}
         >
           {this.props.colName}

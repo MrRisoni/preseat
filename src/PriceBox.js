@@ -5,7 +5,7 @@ class PriceBox extends Component {
   static contextType = DataContext;
 
   getPassengerClasName(currentPaxId, activePaxId) {
-    return currentPaxId == activePaxId ? "table-info" : "";
+    return currentPaxId === activePaxId ? "table-info" : "";
   }
 
   render() {
@@ -16,7 +16,7 @@ class PriceBox extends Component {
 
       return Object.assign(
         {},
-        { key, href: "#" + key, tab: "tb" + key, selected: idx == 0 },
+        { key, href: "#" + key, tab: "tb" + key, selected: idx === 0 },
         sg
       );
     });
@@ -51,7 +51,7 @@ overall = overall.toFixed(2);
               >
                 <td>{psg.name}</td>
                 {psg.selection.map(choice => (
-                  <td key={choice.chosen}>{choice.chosen}</td>
+                  <td key={choice.key}>{choice.chosen}</td>
                 ))}
                 <td>
                   <button
@@ -100,7 +100,7 @@ overall = overall.toFixed(2);
             <tr>
               <td>Total</td>
               {segmentsCost.map(sgc => (
-                <td>
+                <td key={sgc.key}>
                   {sgc.total} {currentCurrency.code}
                 </td>
               ))}

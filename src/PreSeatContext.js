@@ -166,7 +166,7 @@ class PreSeatContextProvider extends Component {
     console.log("clicked on " + this.state.pricingInfo[data.pricingKey]);
 
     foo.costEur = 34;
-      foo.cost =  foo.costEur * this.state.currentCurrency.rate;
+      foo.cost =  parseFloat(foo.costEur * this.state.currentCurrency.rate).toFixed(2);
     this.setState({
       passengers: paxes
     });
@@ -175,7 +175,7 @@ class PreSeatContextProvider extends Component {
 updateSettings= (config) => {
   console.log(config);
   let newCurData = this.state.currencies.filter( fl => {
-     return fl.code == config.currency;
+     return fl.code === config.currency;
   });
 
   console.log(newCurData[0]);

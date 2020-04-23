@@ -13,7 +13,7 @@ class SegmentTabs extends Component {
 
       return Object.assign(
         {},
-        { key, href: "#" + key, tab: "tb" + key, selected: idx == 0 },
+        { key, href: "#" + key, tab: "tb" + key, selected: idx === 0 },
         sg
       );
     });
