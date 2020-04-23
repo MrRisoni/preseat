@@ -4,8 +4,8 @@
   "NO": "No Seat Here",
   "General": {
     "Passengers": "Passengers",
-    "Select" : "Select",
-      "ClearAll" : "Clear All",
-        "Submit" : "Submit"
+    "Select": "Select",
+    "ClearAll": "Clear All",
+    "Submit": "Submit"
   }
 }

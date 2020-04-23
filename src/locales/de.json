@@ -3,9 +3,8 @@
   "EX": "Emergency Exit",
   "General": {
     "Passengers": "Passagiere",
-    "Select" : "Wählen",
-      "ClearAll" : "Rücksetzen",
-        "Submit" : "Einsenden"
-
+    "Select": "Wählen",
+    "ClearAll": "Rücksetzen",
+    "Submit": "Einsenden"
   }
 }

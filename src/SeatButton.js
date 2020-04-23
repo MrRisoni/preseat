@@ -19,7 +19,13 @@ class SeatButton extends Component {
     });
   }
   render() {
-    let { passengers, pricingInfo, currentCurrency } = this.context;
+    let {
+      passengers,
+      pricingInfo,
+      currentCurrency,
+      translations,
+      currentLang
+    } = this.context;
 
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
@@ -44,6 +50,7 @@ class SeatButton extends Component {
       clsName += " seatChosen ";
     }
     var price = pricingInfo[this.props.pricingKey] + " " + currentCurrency.code;
+    price += " " + translations["ru"].LG;
     return (
       <span>
         <div
