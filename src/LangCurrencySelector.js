@@ -6,20 +6,26 @@ class LangCurrencySelector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: "",
-      cur: ""
+      lang: "en",
+      currency: "EUR"
     };
 
     this.changeLang = this.changeLang.bind(this);
+    this.changeCurrency = this.changeCurrency.bind(this);
+
     this.changeSettings = this.changeSettings.bind(this);
   }
 
+  changeCurrency(ev) {
+    this.setState({ currency: ev.target.value });
+  }
   changeLang(ev) {
     console.log(ev.target.value);
     this.setState({ lang: ev.target.value });
   }
+
   changeSettings() {
-    this.context.functions.updateChosenLang(this.state.lang);
+    this.context.functions.updateSettings(this.state);
   }
 
   render() {
@@ -48,7 +54,7 @@ class LangCurrencySelector extends Component {
             </select>
           </div>
           <div className="col-4">
-            <select className="form-control">
+            <select className="form-control" onChange={this.changeCurrency}>
               {currencies.map(cur => (
                 <option
                   value={cur.code}

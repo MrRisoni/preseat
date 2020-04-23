@@ -26,12 +26,12 @@ class PriceBox extends Component {
     for (var s = 0; s < segments.length; s++) {
       let ttl = 0;
       for (var p = 0; p < passengers.length; p++) {
-        ttl += passengers[p].selection[s].cost;
-        overall += passengers[p].selection[s].cost;
+        ttl += parseFloat(passengers[p].selection[s].cost);
+        overall += parseFloat(passengers[p].selection[s].cost);
       }
-      segmentsCost.push({ key: s, total: ttl });
+      segmentsCost.push({ key: s, total: ttl.toFixed(2) });
     }
-
+overall = overall.toFixed(2);
     return (
       <section>
         <table className="table table-bordered">
