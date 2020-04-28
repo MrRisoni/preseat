@@ -15,7 +15,7 @@ class SeatsSection extends Component {
      if (seatId ===0) {
        hasLeft =1;
      }
-     if (seatId === layoutLen) {
+     if (seatId === layoutLen -1) {
        hasRight = 1;
      }
    }
@@ -94,22 +94,12 @@ var exits = this.checkEmergencyExits({seatProps:seatsData[seatId].props, layoutL
           />
         );
 
-      /*  if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
-          if (
-            x === layout.length - 1 &&
-            seatsData[r].seats[x].props.indexOf("EX") > -1
-          ) {
-            exitClass = " emergencyExit emergencyRight";
+          if (exits.hasRight ==1) {
+           exitClass = " emergencyExit emergencyRight";
 
-            colsHtml.push(<div className={exitClass}></div>);
-          }
-        } */
+          colsHtml.push(<div className={exitClass}></div>);
+         }
 
-      //  if (this.checkEmergencyExit( {seatsData,layoutLen:layout.length, r,x})) {
-      //    exitClass = " emergencyExit emergencyRight";
-
-        //  colsHtml.push(<div className={exitClass}></div>);
-      //   }
 
         if (rowId > 0) {
           colsHtml.push(
