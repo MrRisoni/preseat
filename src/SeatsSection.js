@@ -29,11 +29,11 @@ class SeatsSection extends Component {
     let layout = this.props.data.layoutStr;
       var pricingKey =  this.props.data.pricingKey;
     let start = this.props.data.start;
+    let finish = this.props.data.end;
     let seatsData = this.props.data.rows;
     var exitClass = '';
     let r = -1;
-    var i = start;
-    for (let rowsObj of this.props.data.rows) {
+    for (let i = start; i <= finish; i++) {
       let colsHtml = [];
       r++;
       var mapRowId = 0;
@@ -44,7 +44,7 @@ class SeatsSection extends Component {
         }
         var el = [];
         var tooltip = [];
-        if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
+       if (seatsData[r] !== undefined && seatsData[r].seats[x] !== undefined) {
           mapRowId = seatsData[r].rowId;
 
           if (seatsData[r].seats[x].props.indexOf("LG") > -1) {
@@ -117,7 +117,7 @@ class SeatsSection extends Component {
         }
       }
       seatsHtml.push(<div className="row seatsHorRow">{colsHtml}</div>);
-    } // end rows iteration
+    }
     return <section className="segmentMap">{seatsHtml}</section>;
   }
 }
