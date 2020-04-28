@@ -1,15 +1,7 @@
+var fs = require("fs");
+
 var segments = 3;
-// skip 13
 var fillup = 35;
-var pricingKeys = [
-  "OS2pha83MngY",
-  "Tz8j1EwLUM3i",
-  "Nd7IaiLHRW4G",
-  "OQjLVGnKvqfk",
-  "cwpJgeTSGlCY",
-  "wvqruWMFfGBb",
-  "wTEoTjyzDiSg"
-];
 
 var sections = [
   [
@@ -29,37 +21,63 @@ var sections = [
 
 var layOutObj = [];
 for (var sg = 0; sg < segments; sg++) {
-  var subsecions = sections[sg];
-  var subsectLen = subsecions.length;
+  var sectionOfSegment = sections[sg];
+  var subsectLen = sectionOfSegment.length;
+  console.log('************************');
 
-  var sekta = [];
+  console.log('Creating SEGMENT ' + sg);
+  var allSectionSegments = [];
+  var partialSection = [];
+
   for (sc = 0; sc < subsectLen; sc++) {
+    console.log('Checking section ' + sc);
     var rows = [];
-    var seatLen = subsecions[sc].layoutStr.length;
-    for (var r = subsecions[sc].start; r < subsecions[sc].end; r++) {
+    var seatLen = sectionOfSegment[sc].layoutStr.length;
+    // make rows for section sc
+    console.log('starts from ' + sectionOfSegment[sc].start + ' ends in ' + sectionOfSegment[sc].end)
+    for (
+      var r = sectionOfSegment[sc].start;
+      r < sectionOfSegment[sc].end;
+      r++
+    ) {
       if (r != 13) {
         var seats = [];
         for (var t = 0; t < seatLen; t++) {
-          var free = 1;
-          seats.push({ props: "LG", free: free });
-        }
-        rows.push({ rowId: r, seats: seats });
-      }
-    }
-    var kasta = {
-      segId: sg,
-      start: subsecions[sc].start,
-      end: subsecions[sc].end,
-      layoutStr: subsecions[sc].layoutStr,
-      pricingKey: subsecions[sc].key,
-      rows: rows
-    };
-    //var kasta = subsecions[sc];
-    sekta.push(kasta);
-  }
+          var free = 0;
+          var props = "";
+          if (r <= sectionOfSegment[sc].start + 2) {
+            props = "LG";
+          }
+          if (Math.random() * 100 > fillup) {
+            free = 1;
+          }
+          seats.push({ props: props, free: free });
+        } //end if seats iteration
+        console.log('Creted seats for row ' + r);
+          rows.push({ rowId: r, seats: seats });
+      } //end if row 13
 
-  layOutObj.push(sekta);
-  //	var newItm = {segId:sg,sections:sekta};
+    } // end if rows iteration
+
+    partialSection.push({
+      start: sectionOfSegment[sc].start,
+      end: sectionOfSegment[sc].end,
+      layoutStr: sectionOfSegment[sc].layoutStr,
+      pricingKey: sectionOfSegment[sc].key,
+      rows: rows
+    });
+
+  } // end for segment section
+
+  layOutObj.push({ segId: sg, sections: partialSection });
 }
 
-console.log(layOutObj);
+
+fs.writeFile("seatMapLayout.json", JSON.stringify(layOutObj), "utf8", function(err) {
+  if (err) {
+    console.log("An error occured while writing JSON Object to File.");
+    return console.log(err);
+  }
+
+  console.log("JSON file has been saved.");
+});
