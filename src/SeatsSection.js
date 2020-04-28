@@ -3,23 +3,23 @@ import SeatButton from "./SeatButton";
 
 class SeatsSection extends Component {
 
- checkEmergencyExitRight(data)
+ checkEmergencyExits(data)
  {
-   var seatsData = data.seatsData;
+   var seatProps = data.seatProps;
+   var seatId = data.seatId;
    var layoutLen = data.layoutLen;
-   var rowIndex = data.rowIndex;
-   var seatIndex = data.seatIndex;
+   var hasLeft = 0;
+   var hasRight = 0;
 
-   if (seatsData[rowIndex] !== undefined && seatsData[rowIndex].seats[seatIndex] !== undefined) {
-     if (
-       seatIndex === layoutLen - 1 &&
-       seatsData[rowIndex].seats[seatIndex].props.indexOf("EX") > -1
-     ) {
-       console.log('YESS');
-       return true;
+   if (seatProps.indexOf("EX") > -1) {
+     if (seatId ===0) {
+       hasLeft =1;
+     }
+     if (seatId === layoutLen) {
+       hasRight = 1;
      }
    }
-   return false;
+   return {hasLeft,hasRight};
  }
 
   render() {
@@ -64,15 +64,17 @@ class SeatsSection extends Component {
             el.push("seatNotExists");
           }
 
-          if (seatId === 0 && seatsData[seatId].props.indexOf("EX") > -1) {
+var exits = this.checkEmergencyExits({seatProps:seatsData[seatId].props, layoutLen:layout.length,seatId:seatId});
+
+          if (exits.hasLeft ==1) {
             exitClass = " emergencyExit emergencyLeft";
             tooltip.push('EX');
             colsHtml.push(<div className={exitClass}></div>);
           }
 
-    //   if (this.checkEmergencyExitRight( {props:seatsData[x].props,layoutLen:layout.length,x})) {
-    //   tooltip.push('EX');
-    //    }
+          if (exits.hasRight ==1) {
+     tooltip.push('EX');
+     }
 
 
 
