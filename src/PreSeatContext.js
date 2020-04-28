@@ -10,13 +10,13 @@ export const DataContext = createContext();
 class PreSeatContextProvider extends Component {
   state = {
     pricingInfo: {
-      "OS2pha83MngY": 25,
-      "Tz8j1EwLUM3i": 35,
-      "Nd7IaiLHRW4G": 10,
-      "OQjLVGnKvqfk": 20,
-      "cwpJgeTSGlCY": 15,
-      "wvqruWMFfGBb": 30,
-      "wTEoTjyzDiSg": 30
+      OS2pha83MngY: 25,
+      Tz8j1EwLUM3i: 35,
+      Nd7IaiLHRW4G: 10,
+      OQjLVGnKvqfk: 20,
+      cwpJgeTSGlCY: 15,
+      wvqruWMFfGBb: 30,
+      wTEoTjyzDiSg: 30
     },
     segments: [
       {
@@ -46,28 +46,28 @@ class PreSeatContextProvider extends Component {
         ptc: "ADT",
         name: "August Strindberg",
         totalCost: 0,
-                totalCostEur: 0,
+        totalCostEur: 0,
         selection: [
           {
             key: "T1S1",
             segId: 0,
-            chosen: "Heu",
+            chosen: "",
             cost: 0,
-              costEur: 0
+            costEur: 0
           },
           {
             key: "T1S2",
             segId: 1,
             chosen: "",
             cost: 0,
-              costEur: 0
+            costEur: 0
           },
           {
             key: "T1S3",
             segId: 2,
             chosen: "",
             cost: 0,
-              costEur: 10
+            costEur: 10
           }
         ]
       },
@@ -83,21 +83,21 @@ class PreSeatContextProvider extends Component {
             segId: 0,
             chosen: "",
             cost: 0,
-              costEur: 0
+            costEur: 0
           },
           {
             key: "T2S2",
             segId: 1,
             chosen: "",
             cost: 0,
-              costEur: 0
+            costEur: 0
           },
           {
             key: "T2S3",
             segId: 2,
             chosen: "",
             cost: 0,
-              costEur: 0
+            costEur: 0
           }
         ]
       }
@@ -154,9 +154,9 @@ class PreSeatContextProvider extends Component {
       }
     ],
     currentLang: "en",
-      currentCurrency: {
+    currentCurrency: {
       code: "EUR",
-      rate: 1.00
+      rate: 1.0
     }
   };
 
@@ -166,38 +166,41 @@ class PreSeatContextProvider extends Component {
     let foo = paxes[this.state.activePax].selection[data.segId];
     foo.chosen = data.row + data.col;
 
-    foo.costEur =  this.state.pricingInfo[data.pricingKey];
-      foo.cost =  parseFloat(foo.costEur * this.state.currentCurrency.rate).toFixed(2);
+    foo.costEur = this.state.pricingInfo[data.pricingKey];
+    foo.cost = parseFloat(
+      foo.costEur * this.state.currentCurrency.rate
+    ).toFixed(2);
     this.setState({
       passengers: paxes
     });
   };
 
-updateSettings= (config) => {
-  console.log(config);
-  let newCurData = this.state.currencies.filter( fl => {
-     return fl.code === config.currency;
-  });
+  updateSettings = config => {
+    console.log(config);
+    let newCurData = this.state.currencies.filter(fl => {
+      return fl.code === config.currency;
+    });
 
-  console.log(newCurData[0]);
+    console.log(newCurData[0]);
 
-  let paxes = this.state.passengers;
-  for (var p = 0; p < this.state.passengers.length; p++) {
+    let paxes = this.state.passengers;
+    for (var p = 0; p < this.state.passengers.length; p++) {
+      for (var s = 0; s < paxes[p].selection.length; s++) {
+        paxes[p].selection[s].cost = parseFloat(
+          paxes[p].selection[s].costEur * newCurData[0].rate
+        );
+        paxes[p].selection[s].cost = paxes[p].selection[s].cost.toFixed(2);
+      }
+    }
 
-  for (var s = 0; s < paxes[p].selection.length; s++) {
-    paxes[p].selection[s].cost = parseFloat(paxes[p].selection[s].costEur *newCurData[0].rate) ;
-paxes[p].selection[s].cost = paxes[p].selection[s].cost.toFixed(2);
-  }
-  }
+    console.log(paxes);
 
-console.log(paxes);
-
-  this.setState({
-    currentLang: config.lang,
-    currentCurrency :   newCurData[0],
-    passengers:paxes
-  });
-};
+    this.setState({
+      currentLang: config.lang,
+      currentCurrency: newCurData[0],
+      passengers: paxes
+    });
+  };
 
   updateChosenLang = newLang => {
     this.setState({
@@ -221,7 +224,6 @@ console.log(paxes);
       paxes[realId].selection[s].chosen = "";
       paxes[realId].selection[s].cost = 0;
       paxes[realId].selection[s].costEur = 0;
-
     }
     console.log(paxes);
     this.setState({
@@ -239,7 +241,7 @@ console.log(paxes);
             pickSeat: this.pickSeat,
             setActivePax: this.setActivePax,
             updateChosenLang: this.updateChosenLang,
-            updateSettings:this.updateSettings
+            updateSettings: this.updateSettings
           }
         }}
       >

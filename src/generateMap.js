@@ -23,18 +23,23 @@ var layOutObj = [];
 for (var sg = 0; sg < segments; sg++) {
   var sectionOfSegment = sections[sg];
   var subsectLen = sectionOfSegment.length;
-  console.log('************************');
+  console.log("************************");
 
-  console.log('Creating SEGMENT ' + sg);
+  console.log("Creating SEGMENT " + sg);
   var allSectionSegments = [];
   var partialSection = [];
 
   for (sc = 0; sc < subsectLen; sc++) {
-    console.log('Checking section ' + sc);
+    console.log("Checking section " + sc);
     var rows = [];
     var seatLen = sectionOfSegment[sc].layoutStr.length;
     // make rows for section sc
-    console.log('starts from ' + sectionOfSegment[sc].start + ' ends in ' + sectionOfSegment[sc].end)
+    console.log(
+      "starts from " +
+        sectionOfSegment[sc].start +
+        " ends in " +
+        sectionOfSegment[sc].end
+    );
     for (
       var r = sectionOfSegment[sc].start;
       r <= sectionOfSegment[sc].end;
@@ -56,28 +61,27 @@ for (var sg = 0; sg < segments; sg++) {
           }
           seats.push({ props: props, free: free });
         } //end if seats iteration
-        console.log('Creted seats for row ' + r);
-          rows.push({ rowId: r, seats: seats });
+        console.log("Creted seats for row " + r);
+        rows.push({ rowId: r, seats: seats });
       } //end if row 13
-
     } // end if rows iteration
 
     partialSection.push({
-      sectionId:'SG' + sg + 'SC'+ sc,
+      sectionId: "SG" + sg + "SC" + sc,
       start: sectionOfSegment[sc].start,
       end: sectionOfSegment[sc].end,
       layoutStr: sectionOfSegment[sc].layoutStr,
       pricingKey: sectionOfSegment[sc].key,
       rows: rows
     });
-
   } // end for segment section
 
   layOutObj.push({ segId: sg, sections: partialSection });
 }
 
-
-fs.writeFile("seatMapLayout.json", JSON.stringify(layOutObj), "utf8", function(err) {
+fs.writeFile("seatMapLayout.json", JSON.stringify(layOutObj), "utf8", function(
+  err
+) {
   if (err) {
     console.log("An error occured while writing JSON Object to File.");
     return console.log(err);

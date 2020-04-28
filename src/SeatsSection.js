@@ -33,7 +33,6 @@ class SeatsSection extends Component {
       var seatsData = rowsObj.seats;
       let colsHtml = [];
 
-
       for (let seatId = 0; seatId < layout.length; seatId++) {
         var showRowId = 0;
         if (
@@ -70,7 +69,9 @@ class SeatsSection extends Component {
         if (exits.hasLeft == 1) {
           exitClass = " emergencyExit emergencyLeft";
           tooltip.push("EX");
-          colsHtml.push(<div key={this.props.data.sectionId} className={exitClass}></div>);
+          colsHtml.push(
+            <div key={this.props.data.sectionId} className={exitClass}></div>
+          );
         }
 
         if (exits.hasRight == 1) {

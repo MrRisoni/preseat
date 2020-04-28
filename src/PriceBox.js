@@ -41,7 +41,7 @@ overall = overall.toFixed(2);
               {segsArr.map(sg => (
                 <th key={sg.key}>{sg.key}</th>
               ))}
-              <td>Actions</td>
+              <td></td>
             </tr>
           </thead>
           <tbody>
@@ -80,7 +80,7 @@ overall = overall.toFixed(2);
               {segsArr.map(sg => (
                 <th key={sg.key}>{sg.key}</th>
               ))}
-              <td>Total</td>
+              <td>{translations[currentLang].General.Total}</td>
             </tr>
           </thead>
           <tbody>
@@ -98,7 +98,7 @@ overall = overall.toFixed(2);
               </tr>
             ))}
             <tr>
-              <td>Total</td>
+              <td>{translations[currentLang].General.Total}</td>
               {segmentsCost.map(sgc => (
                 <td key={sgc.key}>
                   {sgc.total} {currentCurrency.code}

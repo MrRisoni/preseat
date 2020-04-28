@@ -6,7 +6,11 @@ class SeatMap extends Component {
     return (
       <section>
         {this.props.stmp.sections.map(section => (
-          <SeatsSection key={section.sectionId} segId={this.props.segId} data={section} />
+          <SeatsSection
+            key={section.sectionId}
+            segId={this.props.segId}
+            data={section}
+          />
         ))}
       </section>
     );

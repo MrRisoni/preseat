@@ -1,7 +1,8 @@
 {
-  "LG": "Extra Legroom",
-  "EX": "Emergency Exit",
+  "LG": "Espace supplémentaire pour les jambes",
+  "EX": "Sortie d'urgence",
   "General": {
+    "Total": "Totale",
     "Passengers": "Passagers",
     "Select": "Choisir",
     "ClearAll": "Réinitialiser",

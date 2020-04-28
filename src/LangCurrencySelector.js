@@ -20,7 +20,6 @@ class LangCurrencySelector extends Component {
     this.setState({ currency: ev.target.value });
   }
   changeLang(ev) {
-    console.log(ev.target.value);
     this.setState({ lang: ev.target.value });
   }
 
@@ -41,24 +40,26 @@ class LangCurrencySelector extends Component {
       <section id="selectors">
         <div className="row">
           <div className="col-4">
-            <select defaultValue={currentLang} className="form-control" onChange={this.changeLang}>
+            <select
+              defaultValue={currentLang}
+              className="form-control"
+              onChange={this.changeLang}
+            >
               {languages.map(lang => (
-                <option
-                  value={lang.code}
-                  key={lang.code}
-                >
+                <option value={lang.code} key={lang.code}>
                   {lang.title}
                 </option>
               ))}
             </select>
           </div>
           <div className="col-4">
-            <select defaultValue={currentCurrency.code} className="form-control" onChange={this.changeCurrency}>
+            <select
+              defaultValue={currentCurrency.code}
+              className="form-control"
+              onChange={this.changeCurrency}
+            >
               {currencies.map(cur => (
-                <option
-                  value={cur.code}
-                  key={cur.code}
-                >
+                <option value={cur.code} key={cur.code}>
                   {cur.code}
                 </option>
               ))}

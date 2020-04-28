@@ -1,8 +1,8 @@
 {
   "LG": "Extra Legroom",
   "EX": "Emergency Exit",
-  "NO": "No Seat Here",
   "General": {
+    "Total": "Total",
     "Passengers": "Passengers",
     "Select": "Select",
     "ClearAll": "Clear All",

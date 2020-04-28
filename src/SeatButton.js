@@ -30,7 +30,6 @@ class SeatButton extends Component {
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
 
-
     var seatId = this.props.rowId + this.props.colName;
     var isChosen = false;
     for (var p = 0; p < passengers.length; p++) {
@@ -46,11 +45,11 @@ class SeatButton extends Component {
       clsName += " seatChosen ";
     }
     var tip = [pricingInfo[this.props.pricingKey] + " " + currentCurrency.code];
-    if (this.props.tooltips.indexOf('LG') > -1) {
-        tip.push(translations[currentLang].LG);
+    if (this.props.tooltips.indexOf("LG") > -1) {
+      tip.push(translations[currentLang].LG);
     }
-    if (this.props.tooltips.indexOf('EX') > -1) {
-        tip.push(translations[currentLang].EX);
+    if (this.props.tooltips.indexOf("EX") > -1) {
+      tip.push(translations[currentLang].EX);
     }
     return (
       <span>
@@ -58,7 +57,7 @@ class SeatButton extends Component {
           className={clsName}
           data-toggle="tooltip"
           data-placement="top"
-          title={tip.join(' ')}
+          title={tip.join(" ")}
           onClick={this.handleClick}
         >
           {this.props.colName}
