@@ -54,10 +54,10 @@ class SeatsSection extends Component {
             tooltip.push('LG');
           }
 
-          if (seatsData[seatId].available === 0) {
+          if (seatsData[seatId].free === 0) {
             el = []; // top priority not available
             el.push("seatNotAvailable");
-          }
+        }
 
           if (seatsData[seatId].props.indexOf("NO") > -1) {
             tooltip = el = []; // top priority not available
@@ -77,8 +77,7 @@ var exits = this.checkEmergencyExits({seatProps:seatsData[seatId].props, layoutL
      }
 
 
-
-        btnKey = "stBtn_" + i + layout[seatId].name;
+        btnKey = "stBtn_" + i + '_col_' + alphabet[seatId];
 
 
         colsHtml.push(

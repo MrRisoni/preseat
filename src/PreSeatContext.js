@@ -10,12 +10,13 @@ export const DataContext = createContext();
 class PreSeatContextProvider extends Component {
   state = {
     pricingInfo: {
-      g1frlzYN9cMJ: 25,
-      "4gDQXDj8R1S9": 35,
-      DlRZ1o65RsIw: 10,
-      MAlbfML85mvs: 20,
-      G6xCQRkVfrN6: 15,
-      a9gD3oYqDh1r: 30
+      "OS2pha83MngY": 25,
+      "Tz8j1EwLUM3i": 35,
+      "Nd7IaiLHRW4G": 10,
+      "OQjLVGnKvqfk": 20,
+      "cwpJgeTSGlCY": 15,
+      "wvqruWMFfGBb": 30,
+      "wTEoTjyzDiSg": 30
     },
     segments: [
       {
