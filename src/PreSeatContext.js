@@ -59,14 +59,14 @@ class PreSeatContextProvider extends Component {
             key: "T1S2",
             segId: 1,
             chosen: "",
-            cost: 30,
-              costEur: 30
+            cost: 0,
+              costEur: 0
           },
           {
             key: "T1S3",
             segId: 2,
             chosen: "",
-            cost: 10,
+            cost: 0,
               costEur: 10
           }
         ]
@@ -76,7 +76,7 @@ class PreSeatContextProvider extends Component {
         key: "T2",
         ptc: "ADT",
         name: "Henrik Ibsen",
-        totalCost: 20,
+        totalCost: 0,
         selection: [
           {
             key: "T2S1",
@@ -89,8 +89,8 @@ class PreSeatContextProvider extends Component {
             key: "T2S2",
             segId: 1,
             chosen: "",
-            cost: 40,
-              costEur: 40
+            cost: 0,
+              costEur: 0
           },
           {
             key: "T2S3",
@@ -161,12 +161,12 @@ class PreSeatContextProvider extends Component {
   };
 
   pickSeat = data => {
+    console.log(data);
     let paxes = this.state.passengers;
     let foo = paxes[this.state.activePax].selection[data.segId];
     foo.chosen = data.row + data.col;
-    console.log("clicked on " + this.state.pricingInfo[data.pricingKey]);
 
-    foo.costEur = 34;
+    foo.costEur =  this.state.pricingInfo[data.pricingKey];
       foo.cost =  parseFloat(foo.costEur * this.state.currentCurrency.rate).toFixed(2);
     this.setState({
       passengers: paxes

@@ -22,7 +22,7 @@ class SeatsSection extends Component {
 
   render() {
     let seatsHtml = [];
-    let alphabet = "ABCDEFGH";
+    let alphabet = "ABCDEFGHIJK";
     let btnKey = "";
     let layout = this.props.data.layoutStr;
     var pricingKey = this.props.data.pricingKey;
@@ -70,7 +70,7 @@ class SeatsSection extends Component {
         if (exits.hasLeft == 1) {
           exitClass = " emergencyExit emergencyLeft";
           tooltip.push("EX");
-          colsHtml.push(<div className={exitClass}></div>);
+          colsHtml.push(<div key={this.props.data.sectionId} className={exitClass}></div>);
         }
 
         if (exits.hasRight == 1) {

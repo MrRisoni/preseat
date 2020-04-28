@@ -12,7 +12,7 @@ class SeatButton extends Component {
 
   handleClick() {
     this.context.functions.pickSeat({
-      row: this.props.actualRow,
+      row: this.props.rowId,
       col: this.props.colName,
       segId: this.props.segId,
       pricingKey: this.props.pricingKey
@@ -30,12 +30,8 @@ class SeatButton extends Component {
     let seatProperties = this.props.seatContextClasses.join(" ");
     let clsName = "btn seatBtn btn-sm btn-primary " + seatProperties;
 
-  /*  let rowNumberDiv = <span />;
-    if (this.props.rowId > 0) {
-      rowNumberDiv = <span className="row-number">{this.props.rowId}</span>;
-    } */
 
-    var seatId = this.props.actualRow + this.props.colName;
+    var seatId = this.props.rowId + this.props.colName;
     var isChosen = false;
     for (var p = 0; p < passengers.length; p++) {
       var selSeat = passengers[p].selection[this.props.segId]["chosen"];

@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 var segments = 3;
-var fillup = 35;
+var fillup = 15;
 
 var sections = [
   [
@@ -13,9 +13,9 @@ var sections = [
     { start: 21, end: 29, layoutStr: "WCAACW", key: "OQjLVGnKvqfk" }
   ],
   [
-    { start: 10, end: 18, layoutStr: "WAACW", key: "cwpJgeTSGlCY" },
-    { start: 19, end: 25, layoutStr: "WCAACW", key: "wvqruWMFfGBb" },
-    { start: 26, end: 38, layoutStr: "WCAACW", key: "wTEoTjyzDiSg" }
+    { start: 10, end: 18, layoutStr: "WAACAAW", key: "cwpJgeTSGlCY" },
+    { start: 19, end: 25, layoutStr: "WCAACAACW", key: "wvqruWMFfGBb" },
+    { start: 26, end: 38, layoutStr: "WCAACAACW", key: "wTEoTjyzDiSg" }
   ]
 ];
 
@@ -63,6 +63,7 @@ for (var sg = 0; sg < segments; sg++) {
     } // end if rows iteration
 
     partialSection.push({
+      sectionId:'SG' + sg + 'SC'+ sc,
       start: sectionOfSegment[sc].start,
       end: sectionOfSegment[sc].end,
       layoutStr: sectionOfSegment[sc].layoutStr,
