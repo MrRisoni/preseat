@@ -9,7 +9,7 @@ var sections = [
     { start: 19, end: 25, layoutStr: "WCAACW", key: "Tz8j1EwLUM3i" }
   ],
   [
-    { start: 9, end: 18, layoutStr: "WCACACW", key: "Nd7IaiLHRW4G" },
+    { start: 9, end: 18, layoutStr: "WCAACW", key: "Nd7IaiLHRW4G" },
     { start: 21, end: 29, layoutStr: "WCAACW", key: "OQjLVGnKvqfk" }
   ],
   [
@@ -37,7 +37,7 @@ for (var sg = 0; sg < segments; sg++) {
     console.log('starts from ' + sectionOfSegment[sc].start + ' ends in ' + sectionOfSegment[sc].end)
     for (
       var r = sectionOfSegment[sc].start;
-      r < sectionOfSegment[sc].end;
+      r <= sectionOfSegment[sc].end;
       r++
     ) {
       if (r != 13) {
@@ -45,7 +45,7 @@ for (var sg = 0; sg < segments; sg++) {
         for (var t = 0; t < seatLen; t++) {
           var free = 0;
           var props = "";
-          if (r <= sectionOfSegment[sc].start + 2) {
+          if (r <= sectionOfSegment[sc].start + 1) {
             props = "LG";
           }
           if (Math.random() * 100 > fillup) {

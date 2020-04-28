@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import SeatButton from "./SeatButton";
 
 class SeatsSection extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
 
  checkEmergencyExit(data)
  {
@@ -29,9 +24,10 @@ class SeatsSection extends Component {
 
   render() {
     let seatsHtml = [];
-
+    let alphabet = 'ABCDEFGH';
     let btnKey = "";
-    let layout = this.props.data.layout;
+    let layout = this.props.data.layoutStr;
+      var pricingKey =  this.props.data.pricingKey;
     let start = this.props.data.start;
     let finish = this.props.data.end;
     let seatsData = this.props.data.rows;
@@ -43,7 +39,7 @@ class SeatsSection extends Component {
       var mapRowId = 0;
       for (let x = 0; x < layout.length; x++) {
         let rowId = 0;
-        if (x > 0 && layout[x].pos === "A" && layout[x + 1].pos === "A") {
+        if (x > 0 && layout[x] === "A" && layout[x + 1] === "A") {
           rowId = i;
         }
         var el = [];
@@ -80,14 +76,14 @@ class SeatsSection extends Component {
         }
 
         btnKey = "stBtn_" + i + layout[x].name;
-        var pricingKey = (seatsData[r].seats[x].pricingKey !== undefined) ? seatsData[r].seats[x].pricingKey  : 'ff';
+
 
         colsHtml.push(
           <SeatButton
             key={btnKey}
             tooltips={tooltip}
             segId={this.props.segId}
-            colName={layout[x].name}
+            colName={alphabet[x]}
             seatContextClasses={el}
             pricingKey={pricingKey}
             rowId={rowId}
