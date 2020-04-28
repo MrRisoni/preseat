@@ -29,11 +29,11 @@ class SeatsSection extends Component {
     let layout = this.props.data.layoutStr;
       var pricingKey =  this.props.data.pricingKey;
     let start = this.props.data.start;
-    let finish = this.props.data.end;
     let seatsData = this.props.data.rows;
     var exitClass = '';
     let r = -1;
-    for (let i = start; i <= finish; i++) {
+    var i = start;
+    for (let rowsObj of this.props.data.rows) {
       let colsHtml = [];
       r++;
       var mapRowId = 0;
@@ -117,7 +117,7 @@ class SeatsSection extends Component {
         }
       }
       seatsHtml.push(<div className="row seatsHorRow">{colsHtml}</div>);
-    }
+    } // end rows iteration
     return <section className="segmentMap">{seatsHtml}</section>;
   }
 }
