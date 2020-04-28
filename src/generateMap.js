@@ -48,6 +48,9 @@ for (var sg = 0; sg < segments; sg++) {
           if (r <= sectionOfSegment[sc].start + 1) {
             props = "LG";
           }
+          if (r <= sectionOfSegment[sc].start) {
+            props += "EX";
+          }
           if (Math.random() * 100 > fillup) {
             free = 1;
           }
