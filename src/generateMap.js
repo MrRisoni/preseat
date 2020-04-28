@@ -23,26 +23,43 @@ var sections = [
   [
     { start: 10, end: 18, layoutStr: "WAACW", key: "cwpJgeTSGlCY" },
     { start: 19, end: 25, layoutStr: "WCAACW", key: "wvqruWMFfGBb" },
-	  { start: 26, end: 38, layoutStr:: "WCAACW", key: "wTEoTjyzDiSg" }
+    { start: 26, end: 38, layoutStr: "WCAACW", key: "wTEoTjyzDiSg" }
   ]
 ];
 
 var layOutObj = [];
 for (var sg = 0; sg < segments; sg++) {
-  var subsecions = sections[s];
-  var subsectLen = subsections.length;
+  var subsecions = sections[sg];
+  var subsectLen = subsecions.length;
 
-	var sekta= [];
-for (sc =0; sc< subsectLen; sc++)
-	{
-
-		var kasta = subsecions[sc];
-
-	}
-
-
-	var newItm = {segId:sg,sections:sekta};
-
-
-
+  var sekta = [];
+  for (sc = 0; sc < subsectLen; sc++) {
+    var rows = [];
+    var seatLen = subsecions[sc].layoutStr.length;
+    for (var r = subsecions[sc].start; r < subsecions[sc].end; r++) {
+      if (r != 13) {
+        var seats = [];
+        for (var t = 0; t < seatLen; t++) {
+          var free = 1;
+          seats.push({ props: "LG", free: free });
+        }
+        rows.push({ rowId: r, seats: seats });
+      }
+    }
+    var kasta = {
+      segId: sg,
+      start: subsecions[sc].start,
+      end: subsecions[sc].end,
+      layoutStr: subsecions[sc].layoutStr,
+      pricingKey: subsecions[sc].key,
+      rows: rows
+    };
+    //var kasta = subsecions[sc];
+    sekta.push(kasta);
   }
+
+  layOutObj.push(sekta);
+  //	var newItm = {segId:sg,sections:sekta};
+}
+
+console.log(layOutObj);
