@@ -3,7 +3,7 @@ import SeatButton from "./SeatButton";
 
 class SeatsSection extends Component {
 
- checkEmergencyExit(data)
+ checkEmergencyExitRight(data)
  {
    var seatsData = data.seatsData;
    var layoutLen = data.layoutLen;
@@ -35,14 +35,13 @@ class SeatsSection extends Component {
 
     var i =start;
     for (var rowsObj of this.props.data.rows) {
-//    for (let i = start; i <= finish; i++) {
       var  seatsData = rowsObj.seats;
       let colsHtml = [];
 
       var mapRowId = 0;
-      for (let x = 0; x < layout.length; x++) {
+      for (let seatId = 0; seatId < layout.length; seatId++) {
         let rowId = 0;
-        if (x > 0 && layout[x] === "A" && layout[x + 1] === "A") {
+        if (seatId > 0 && layout[seatId] === "A" && layout[seatId + 1] === "A") {
           rowId = i;
         }
         var el = [];
@@ -50,34 +49,34 @@ class SeatsSection extends Component {
 
           mapRowId = rowsObj.rowId;
 
-          if (seatsData[x].props.indexOf("LG") > -1) {
+          if (seatsData[seatId].props.indexOf("LG") > -1) {
             el.push("seatLegRoom");
             tooltip.push('LG');
           }
 
-          if (seatsData[x].available === 0) {
+          if (seatsData[seatId].available === 0) {
             el = []; // top priority not available
             el.push("seatNotAvailable");
           }
 
-          if (seatsData[x].props.indexOf("NO") > -1) {
+          if (seatsData[seatId].props.indexOf("NO") > -1) {
             tooltip = el = []; // top priority not available
             el.push("seatNotExists");
           }
 
-          if (x === 0 && seatsData[x].props.indexOf("EX") > -1) {
+          if (seatId === 0 && seatsData[seatId].props.indexOf("EX") > -1) {
             exitClass = " emergencyExit emergencyLeft";
             tooltip.push('EX');
             colsHtml.push(<div className={exitClass}></div>);
           }
 
-      //  if (this.checkEmergencyExit( {seatsData,layoutLen:layout.length, r,x})) {
-      //   tooltip.push('EX');
-         //}
+    //   if (this.checkEmergencyExitRight( {props:seatsData[x].props,layoutLen:layout.length,x})) {
+    //   tooltip.push('EX');
+    //    }
 
 
 
-        btnKey = "stBtn_" + i + layout[x].name;
+        btnKey = "stBtn_" + i + layout[seatId].name;
 
 
         colsHtml.push(
@@ -85,7 +84,7 @@ class SeatsSection extends Component {
             key={btnKey}
             tooltips={tooltip}
             segId={this.props.segId}
-            colName={alphabet[x]}
+            colName={alphabet[seatId]}
             seatContextClasses={el}
             pricingKey={pricingKey}
             rowId={rowId}
