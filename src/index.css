@@ -47,9 +47,12 @@ body {
   border-right: 4px solid red;
 }
 
-.seatBtnt:hover {
-  background-color: blue;
-  color: white;
+.seatBtn:hover {
+  background-color: green;
+  color: red;
+  font-size: 25px;
+  height: 42px;
+  width: 45px;
 }
 
 .seatsHorRow {
